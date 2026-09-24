@@ -6,4 +6,16 @@
 .next-competition strong{font-size:1.65rem;color:#d6ed79;letter-spacing:.5px}
 .next-competition small{color:#aebdd0;text-transform:capitalize}
 .admin-login-actions input{min-width:190px;max-width:250px}
+.championship-countdown{margin:-10px 0 30px;padding:16px 20px;border:1px solid #536437;border-radius:10px;background:linear-gradient(90deg,#d6ed7914,#141d28);display:flex;align-items:center;justify-content:space-between;gap:18px}
+.championship-countdown div{display:flex;align-items:baseline;gap:16px}
+.championship-countdown span{font-size:.75rem;letter-spacing:1px;color:#a9bd76;font-weight:700}
+.championship-countdown strong{font-size:1.5rem;color:#d6ed79;letter-spacing:.5px}
+.championship-countdown small{color:#aebdd0;text-align:right;text-transform:capitalize}
+.activity-card[role=button]{cursor:pointer}
+.activity-card[role=button]:focus-visible{outline:2px solid #d6ed79;outline-offset:3px}
+.admin-week-summary{margin-top:20px;padding:18px;border:1px solid #465532;border-radius:9px;background:#d6ed7908;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.admin-week-summary>div:first-child>span{font-size:.75rem;letter-spacing:.9px;color:#a9bd76;font-weight:700}
+.admin-week-summary h4{margin:5px 0 0;font-size:1rem}
+.admin-week-totals{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
 @media(max-width:650px){.admin-login-actions input{width:100%;max-width:none}.next-competition strong{font-size:1.35rem}}
+@media(max-width:650px){.championship-countdown{margin-bottom:24px;align-items:flex-start;flex-direction:column}.championship-countdown div{align-items:flex-start;flex-direction:column;gap:3px}.championship-countdown small{text-align:left}.admin-week-summary{align-items:flex-start;flex-direction:column}.admin-week-totals{justify-content:flex-start}}

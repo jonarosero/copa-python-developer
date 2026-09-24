@@ -22,6 +22,7 @@ export const competitionSchema = z.object({
   weeks: z.array(z.object({
     number: z.number().int().min(1).max(8),
     title: z.string().trim().min(1).max(100),
+    closesAt: z.string().datetime().nullable().optional(),
     status: z.enum(["closed", "active", "upcoming"]),
     activities: z.array(activitySchema).max(60),
   })).length(8),
