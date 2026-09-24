@@ -63,7 +63,8 @@ export default function Championship({ initial, unavailable = false, initialView
   const currentWinners = leaders(data, currentWeek);
   const assignedCount = currentWeek.activities.filter(a => Object.values(a.scores).some(p => p > 0)).length;
 
-  const weekClosing = currentWeek.closesAt ? new Date(currentWeek.closesAt) : nextCompetitionDate(now);
+  const countdownWeek = currentWeek.status === "closed" ? data.weeks.find(week => week.status === "active") || currentWeek : currentWeek;
+  const weekClosing = countdownWeek.closesAt ? new Date(countdownWeek.closesAt) : nextCompetitionDate(now);
   const countdown = Math.max(0, weekClosing.getTime() - now.getTime());
   const countdownText = `${Math.floor(countdown / 86400000)}d ${Math.floor((countdown % 86400000) / 3600000)}h ${Math.floor((countdown % 3600000) / 60000)}m`;
   async function save(next: Competition, message: string) {
@@ -184,7 +185,7 @@ export default function Championship({ initial, unavailable = false, initialView
     <main className="main-content">
       {loadError && <div className="error-banner" role="alert">No se pudo cargar el marcador guardado. Se muestran los datos iniciales.<button onClick={refresh}><RefreshCw size={16} /> Reintentar</button></div>}
       <div className="page-heading"><div><div className="eyebrow"><span className="tiny-line" /> CURSO PYTHON DEVELOPER</div><h1>El campeonato<span className="heading-dot">.</span></h1><p>8 semanas. 4 equipos. Una gran copa.</p></div><div className="season-summary"><span className="season-icon"><Trophy size={21} /></span><span><strong>{completed} de 8</strong><small>semanas finalizadas</small></span></div></div>
-      <section className="championship-countdown"><div><span>CIERRE DE LA SEMANA {String(selectedWeek).padStart(2, "0")}</span><strong>{countdownText}</strong></div><small>{currentWeek.closesAt ? weekClosing.toLocaleString("es-EC", { dateStyle: "full", timeStyle: "short" }) : "Configura la fecha de cierre desde Administrar campeonato."}</small></section>
+      <section className="championship-countdown"><div><span>CIERRE DE LA SEMANA {String(countdownWeek.number).padStart(2, "0")}</span><strong>{countdownText}</strong></div><small>{countdownWeek.closesAt ? weekClosing.toLocaleString("es-EC", { dateStyle: "full", timeStyle: "short" }) : weekClosing.toLocaleString("es-EC", { dateStyle: "full", timeStyle: "short" })}</small></section>
       <TabsContent value="competition" className="section-content">
         <Tabs value={String(selectedWeek)} onValueChange={v => setSelectedWeek(Number(v))}>
           <TabsList className="week-nav" aria-label="Semanas del campeonato">{data.weeks.map(week => <TabsTrigger key={week.number} value={String(week.number)} className="week-tab"><span className="week-tab-top">SEMANA {String(week.number).padStart(2, "0")}{week.status === "closed" ? <Trophy size={15} /> : week.number === 8 ? <Flag size={15} /> : null}</span><span className={`week-status ${week.status}`}>{week.status === "active" && <span className="live-dot" />}{statusLabels[week.status]}</span></TabsTrigger>)}</TabsList>

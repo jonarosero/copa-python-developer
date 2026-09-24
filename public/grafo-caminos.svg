@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 305" role="img" aria-labelledby="title desc">
+  <title id="title">Grafo dirigido para el reto del camino más corto</title>
+  <desc id="desc">Grafo con nodos del 1 al 8 y costos en cada arista.</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8Z" fill="#355f91"/></marker></defs>
+  <rect width="440" height="305" fill="#fff"/>
+  <g stroke="#355f91" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M62 88 L105 52"/><path d="M64 120 L104 158"/><path d="M154 48 L200 48"/><path d="M154 166 L200 145"/><path d="M153 177 L199 220"/><path d="M239 142 L285 66"/><path d="M240 153 L385 153"/><path d="M240 220 L386 168"/><path d="M240 55 L285 55"/><path d="M327 62 L385 116"/>
+  </g>
+  <g fill="#e7f1f5" stroke="#355f91" stroke-width="2"><circle cx="40" cy="105" r="29"/><circle cx="130" cy="48" r="29"/><circle cx="130" cy="175" r="29"/><circle cx="225" cy="145" r="29"/><circle cx="225" cy="48" r="29"/><circle cx="225" cy="225" r="29"/><circle cx="310" cy="55" r="29"/><circle cx="400" cy="145" r="29"/></g>
+  <g font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#111" text-anchor="middle"><text x="40" y="111">1</text><text x="130" y="54">2</text><text x="130" y="181">3</text><text x="225" y="151">4</text><text x="225" y="54">5</text><text x="225" y="231">6</text><text x="310" y="61">7</text><text x="400" y="151">8</text></g>
+  <g font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#e11"><text x="73" y="65">4</text><text x="74" y="148">3</text><text x="171" y="38">8</text><text x="171" y="150">12</text><text x="169" y="210">4</text><text x="260" y="104">20</text><text x="308" y="143">15</text><text x="311" y="209">22</text><text x="263" y="38">17</text><text x="365" y="96">9</text><text x="241" y="186">2</text></g>
+</svg>

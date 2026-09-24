@@ -1,7 +1,7 @@
 import { competitionSchema, initialCompetition } from "@/lib/competition";
 
 const path = "data/competition.json";
-const repository = process.env.GITHUB_REPOSITORY || "soporteticslg/copa-python-developer";
+const repository = process.env.GITHUB_REPOSITORY || "jonarosero/copa-python-developer";
 const branch = process.env.GITHUB_BRANCH || "main";
 const json = (data: unknown, status = 200) => Response.json(data, { status, headers: { "Cache-Control": "no-store" } });
 
