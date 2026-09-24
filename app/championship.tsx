@@ -26,8 +26,6 @@ function TeamMark({ team, small = false }: { team: Team; small?: boolean }) {
 }
 function Status({ week }: { week: Week }) { return <span className={`status ${week.status}`}>{week.status === "closed" ? <Check size={12} /> : week.status === "active" ? <span className="live-dot" /> : null}{statusLabels[week.status]}</span>; }
 
-const storageKey = "copa-python-developer:competition";
-
 function nextCompetitionDate(now: Date) {
   const next = new Date(now);
   const daysUntilMonday = (8 - now.getDay()) % 7 || 7;
@@ -43,6 +41,7 @@ export default function Championship({ initial, unavailable = false, initialView
   const [selectedWeek, setSelectedWeek] = useState(initial.data.weeks.find(w => w.status === "active")?.number ?? 8);
   const [busy, setBusy] = useState(false);
   const [password, setPassword] = useState("");
+  const [adminPassword, setAdminPassword] = useState("");
   const [now, setNow] = useState(() => new Date());
   const busyRef = useRef(false);
   const [loadError, setLoadError] = useState(unavailable);
@@ -74,21 +73,22 @@ export default function Championship({ initial, unavailable = false, initialView
     if (!parsed.success) { const error = parsed.error.issues[0]?.message || "Revisa los datos."; toast.error(error); throw new Error(error); }
     busyRef.current = true; setBusy(true);
     try {
-      const result: Snapshot = { data: parsed.data, version: snapshotRef.current.version + 1, canEdit: true };
-      localStorage.setItem(storageKey, JSON.stringify(result.data));
+      const response = await fetch("/api/competition", { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ data: parsed.data, sha: snapshotRef.current.sha, password: adminPassword }) });
+      const result = await response.json() as Snapshot & { error?: string };
+      if (!response.ok) throw new Error(result.error || "No se pudo guardar.");
       snapshotRef.current = result; setSnapshot(result); toast.success(message);
       return result;
     } catch (error) { toast.error(error instanceof Error ? error.message : "No se pudo guardar."); throw error; }
     finally { busyRef.current = false; setBusy(false); }
   }
   async function refresh() {
-    const saved = localStorage.getItem(storageKey);
-    if (!saved) { toast.info("No hay cambios guardados en este navegador."); return; }
     try {
-      const data = competitionSchema.parse(JSON.parse(saved));
-      const next = { data, version: snapshotRef.current.version + 1, canEdit: snapshotRef.current.canEdit };
+      const response = await fetch("/api/competition", { cache: "no-store" });
+      const result = await response.json() as Snapshot & { error?: string };
+      if (!response.ok) throw new Error(result.error || "No se pudo actualizar.");
+      const next = { ...result, canEdit: snapshotRef.current.canEdit };
       snapshotRef.current = next; setSnapshot(next); setLoadError(false); toast.success("Marcador actualizado");
-    } catch { toast.error("No se pudo leer el marcador guardado."); }
+    } catch (error) { toast.error(error instanceof Error ? error.message : "No se pudo leer el marcador remoto."); }
   }
   function clone() { return structuredClone(snapshotRef.current.data); }
   function editScores(week: Week, activity: Activity) {
@@ -138,15 +138,15 @@ export default function Championship({ initial, unavailable = false, initialView
   }
 
   useEffect(() => {
-    try {
-      const saved = localStorage.getItem(storageKey);
-      if (!saved) return;
-      const data = competitionSchema.parse(JSON.parse(saved));
-      const next = { data, version: 1, canEdit: false };
-      snapshotRef.current = next;
-      const timer = window.setTimeout(() => setSnapshot(next), 0);
-      return () => window.clearTimeout(timer);
-    } catch { localStorage.removeItem(storageKey); }
+    let cancelled = false;
+    fetch("/api/competition", { cache: "no-store" }).then(async response => {
+      const result = await response.json() as Snapshot;
+      if (!response.ok || cancelled) return;
+      snapshotRef.current = result;
+      setSnapshot(result);
+      setLoadError(false);
+    }).catch(() => { if (!cancelled) setLoadError(true); });
+    return () => { cancelled = true; };
   }, []);
 
   useEffect(() => {
@@ -224,7 +224,7 @@ export default function Championship({ initial, unavailable = false, initialView
       <TabsContent value="teams" className="section-content"><div className="section-heading"><h2>Los equipos</h2><span>4 equipos en competencia</span></div><div className="teams-grid">{data.teams.map(team => <article className="team-card" key={team.id}><div className="team-card-top"><TeamMark team={team} /></div><h2>{teamName(team)}</h2><p className="team-full-name">{team.shortName ? team.name : "Equipo del curso Python Developer"}</p>{team.description && <p className="team-description">{team.description}</p>}<div className="team-members"><h3><Users size={16} />Integrantes <span>{team.members.length}</span></h3>{team.members.length ? <ul>{team.members.map((member, index) => <li key={index}>{member}</li>)}</ul> : <p>Integrantes por registrar</p>}</div><div className="team-stats"><div><strong>{totalScore(data, team.id)}</strong><span>puntos totales</span></div><div><strong>{cupCount(data, team.id)}</strong><span>copas semanales</span></div></div></article>)}</div></TabsContent>
       <TabsContent value="admin" className="section-content admin-panel">
         <div className="admin-heading"><div><div className="eyebrow">ORGANIZACIÓN DEL CURSO</div><h2>Panel de edición</h2><p>Gestiona los equipos, las actividades y el marcador de cada semana.</p></div><span className="admin-access-state"><Settings2 size={17} />{canEdit ? "Edición habilitada" : "Acceso del organizador"}</span></div>
-        {!canEdit && !loadError ? <section className="admin-login"><span className="admin-login-icon"><LockKeyhole size={28} /></span><div><h3>Acceso del organizador</h3><p>Introduce la contraseña para editar equipos, actividades, enunciados y puntajes. Los visitantes solo pueden consultar el campeonato.</p><form className="admin-login-actions" onSubmit={event => { event.preventDefault(); if (password === "1729") { const next = { ...snapshotRef.current, canEdit: true }; snapshotRef.current = next; setSnapshot(next); setPassword(""); toast.success("Edición habilitada"); } else toast.error("Contraseña incorrecta."); }}><Input aria-label="Contraseña de administrador" type="password" value={password} onChange={event => setPassword(event.target.value)} placeholder="Contraseña" required /><button className="button primary"><LogIn size={17} />Entrar a administrar</button></form></div></section> : null}
+        {!canEdit && !loadError ? <section className="admin-login"><span className="admin-login-icon"><LockKeyhole size={28} /></span><div><h3>Acceso del organizador</h3><p>Introduce la contraseña para editar equipos, actividades, enunciados y puntajes. Los visitantes solo pueden consultar el campeonato.</p><form className="admin-login-actions" onSubmit={event => { event.preventDefault(); if (password === "1729") { const next = { ...snapshotRef.current, canEdit: true }; snapshotRef.current = next; setSnapshot(next); setAdminPassword(password); setPassword(""); toast.success("Edición habilitada"); } else toast.error("Contraseña incorrecta."); }}><Input aria-label="Contraseña de administrador" type="password" value={password} onChange={event => setPassword(event.target.value)} placeholder="Contraseña" required /><button className="button primary"><LogIn size={17} />Entrar a administrar</button></form></div></section> : null}
         {canEdit && <>
           <section className="admin-section"><div className="section-heading"><h3>1. Equipos</h3><span>Nombres, integrantes y descripción de cada equipo.</span></div><div className="admin-team-grid">{data.teams.map(team => <div className="admin-team" key={team.id}><TeamMark team={team} small /><div className="admin-team-info"><strong>{teamName(team)}</strong><span>{team.members.length ? team.members.join(" · ") : "Sin integrantes registrados"}</span></div><button className="button secondary" aria-label={`Editar equipo: ${teamName(team)}`} onClick={() => setTeamEditor({ ...team })}><Pencil size={15} />Editar</button></div>)}</div></section>
           <section className="admin-section"><div className="section-heading"><h3>2. Actividades y puntajes</h3></div><div className="admin-week-toolbar"><div className="admin-week-choice"><label htmlFor="admin-week">Semana que quieres editar</label><Select value={String(selectedWeek)} onValueChange={value => setSelectedWeek(Number(value))}><SelectTrigger id="admin-week" className="admin-week-select"><SelectValue /></SelectTrigger><SelectContent>{data.weeks.map(week => <SelectItem key={week.number} value={String(week.number)}>Semana {week.number} · {statusLabels[week.status]}</SelectItem>)}</SelectContent></Select></div><button className="button primary" onClick={newActivity}><Plus size={17} />Añadir actividad</button></div>

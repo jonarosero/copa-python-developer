@@ -48,7 +48,7 @@ export type Team = z.infer<typeof teamSchema>;
 export type Competition = z.infer<typeof competitionSchema>;
 export type Week = Competition["weeks"][number];
 export type Activity = Week["activities"][number];
-export type Snapshot = { data: Competition; version: number; canEdit: boolean };
+export type Snapshot = { data: Competition; version: number; canEdit: boolean; sha?: string };
 export const teamName = (team: Team) => team.shortName || team.name;
 export const weekScore = (week: Week, teamId: string) => week.activities.reduce((sum, a) => sum + (a.scores[teamId] || 0), 0);
 export const totalScore = (data: Competition, teamId: string) => data.weeks.reduce((sum, week) => sum + weekScore(week, teamId), 0);

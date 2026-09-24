@@ -1,0 +1,41 @@
+{
+  "teams": [
+    { "id": "canela", "name": "Grupo Canela", "shortName": "", "color": "orange", "members": [], "description": "" },
+    { "id": "booleanos", "name": "Los Booleanos", "shortName": "", "color": "mint", "members": [], "description": "" },
+    { "id": "dinamita", "name": "Equipo Alfa Buena Maravilla Onda Dinamita Escuadrón Lobo", "shortName": "Triple Dinamita", "color": "violet", "members": [], "description": "" },
+    { "id": "otro", "name": "Grupo Otro", "shortName": "", "color": "blue", "members": [], "description": "" }
+  ],
+  "weeks": [
+    {
+      "number": 1,
+      "title": "Lógica y primeros programas",
+      "status": "closed",
+      "activities": [
+        { "id": "reinas", "title": "4 Reinas", "description": "Resolver el tablero sin que las reinas se ataquen.", "points": 5, "bonus": false, "icon": "queen", "scores": { "canela": 5, "dinamita": 5 } },
+        { "id": "monedas", "title": "Reto de las Monedas", "description": "Encontrar la combinación de monedas del reto.", "points": 5, "bonus": false, "icon": "coins", "scores": { "dinamita": 5 } },
+        { "id": "camino", "title": "El camino más corto", "description": "Encontrar la mejor solución al recorrido.", "points": 5, "bonus": false, "icon": "route", "scores": { "canela": 5 } },
+        { "id": "iva", "title": "Calculadora de productos con IVA", "description": "Crear una calculadora del total de productos con IVA.", "points": 15, "bonus": false, "icon": "calculator", "scores": { "booleanos": 15 } }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Retos de programación",
+      "status": "active",
+      "activities": [
+        { "id": "fizzbuzz", "title": "FizzBuzz", "description": "Condicionales y múltiplos en acción.", "points": 5, "bonus": false, "icon": "zap", "scores": {} },
+        { "id": "primo", "title": "Número primo", "description": "Comprueba si un número es primo.", "points": 10, "bonus": false, "icon": "search", "scores": {} },
+        { "id": "fibonacci", "title": "Fibonacci", "description": "Construye la secuencia con Python.", "points": 15, "bonus": false, "icon": "spiral", "scores": {} },
+        { "id": "dibujando", "title": "Dibujando con Python", "description": "Convierte tus bucles en figuras.", "points": 20, "bonus": false, "icon": "blocks", "scores": {} },
+        { "id": "pokemon", "title": "Batalla Pokémon", "description": "Agua, fuego y planta: programa la batalla.", "points": 50, "bonus": false, "icon": "crown", "scores": {} },
+        { "id": "figura", "title": "Figura adicional", "description": "Un dibujo extra para sumar al marcador.", "points": 5, "bonus": true, "icon": "star", "scores": {} },
+        { "id": "repetible", "title": "Batalla repetible", "description": "Permite volver a jugar sin reiniciar el programa.", "points": 10, "bonus": true, "icon": "flame", "scores": {} }
+      ]
+    },
+    { "number": 3, "title": "Próximos retos", "status": "upcoming", "activities": [] },
+    { "number": 4, "title": "Próximos retos", "status": "upcoming", "activities": [] },
+    { "number": 5, "title": "Próximos retos", "status": "upcoming", "activities": [] },
+    { "number": 6, "title": "Próximos retos", "status": "upcoming", "activities": [] },
+    { "number": 7, "title": "Próximos retos", "status": "upcoming", "activities": [] },
+    { "number": 8, "title": "Próximos retos", "status": "upcoming", "activities": [] }
+  ]
+}
