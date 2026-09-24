@@ -1,0 +1,14 @@
+.next
+node_modules
+.git
+.vercel
+.sites-runtime
+.wrangler
+.openai
+build
+db
+drizzle
+scripts
+vite.config.ts
+cloudflare-env.d.ts
+drizzle.config.ts
