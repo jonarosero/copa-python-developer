@@ -207,6 +207,15 @@
           "bonus": true,
           "icon": "code",
           "scores": {}
+        },
+        {
+          "id": "e6a72b8b-c9ed-4686-86c3-7ac05d795c92",
+          "title": "🔥 BONUS — Programa modular",
+          "description": "Cuando el programa principal funcione correctamente, separen el proyecto en al menos **dos archivos `.py`**.\n\nPor ejemplo:\n\n```text\npizzeria.py\nmain.py\n```\n\nUno de los archivos deberá contener funciones reutilizables y el otro deberá controlar la ejecución principal.\n\nLos archivos deberán comunicarse utilizando:\n\n```python\nimport\n```",
+          "points": 10,
+          "bonus": true,
+          "icon": "code",
+          "scores": {}
         }
       ]
     },
