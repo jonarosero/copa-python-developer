@@ -1,9 +1,37 @@
 {
   "teams": [
-    { "id": "canela", "name": "Grupo Canela", "shortName": "", "color": "orange", "members": [], "description": "" },
-    { "id": "booleanos", "name": "Los Booleanos", "shortName": "", "color": "mint", "members": [], "description": "" },
-    { "id": "dinamita", "name": "Equipo Alfa Buena Maravilla Onda Dinamita Escuadrón Lobo", "shortName": "Triple Dinamita", "color": "violet", "members": [], "description": "" },
-    { "id": "otro", "name": "Code Warriors", "shortName": "", "color": "blue", "members": [], "description": "" }
+    {
+      "id": "canela",
+      "name": "Grupo Canela",
+      "shortName": "",
+      "color": "orange",
+      "members": [],
+      "description": ""
+    },
+    {
+      "id": "booleanos",
+      "name": "Los Booleanos",
+      "shortName": "",
+      "color": "mint",
+      "members": [],
+      "description": ""
+    },
+    {
+      "id": "dinamita",
+      "name": "Equipo Alfa Buena Maravilla Onda Dinamita Escuadrón Lobo",
+      "shortName": "Triple Dinamita",
+      "color": "violet",
+      "members": [],
+      "description": ""
+    },
+    {
+      "id": "otro",
+      "name": "Code Warriors",
+      "shortName": "",
+      "color": "blue",
+      "members": [],
+      "description": ""
+    }
   ],
   "weeks": [
     {
@@ -11,31 +39,159 @@
       "title": "Lógica y primeros programas",
       "status": "closed",
       "activities": [
-        { "id": "reinas", "title": "4 Reinas", "description": "## Objetivo\nUbica cuatro reinas en un tablero de ajedrez de 4 x 4 sin que ninguna pueda atacar a otra.\n\n## Reglas\n- Dos reinas no pueden compartir fila.\n- Dos reinas no pueden compartir columna.\n- Dos reinas no pueden compartir diagonal.\n\nRepresenta el tablero con texto y explica la estrategia que usaste para comprobar cada posición.", "points": 5, "bonus": false, "icon": "queen", "scores": { "canela": 5, "dinamita": 5 } },
-        { "id": "monedas", "title": "Reto de las Monedas", "description": "## Objetivo\nDetermina una combinación de monedas que alcance exactamente el valor solicitado por el usuario.\n\n## Requisitos\n- Pide un valor objetivo.\n- Usa monedas de 1, 5, 10 y 25.\n- Muestra cuántas monedas de cada tipo se utilizaron.\n- Verifica que la suma final sea igual al objetivo.\n\n💡 Piensa en cómo tomar primero las monedas de mayor valor sin exceder el total.", "points": 5, "bonus": false, "icon": "coins", "scores": { "dinamita": 5 } },
-        { "id": "camino", "title": "El camino más corto", "description": "## Objetivo\nEncuentra el camino de menor costo desde el nodo **1** hasta el nodo **8** en el siguiente grafo dirigido.\n\n![Grafo dirigido de caminos](/grafo-caminos.svg)\n\n## Requisitos\n- Indica los nodos que recorres en orden.\n- Calcula el costo total de cada alternativa importante.\n- Justifica por qué tu ruta es la de menor costo.\n\n💡 Puedes usar una tabla con: nodo actual, costo acumulado y mejor ruta conocida.", "points": 5, "bonus": false, "icon": "route", "scores": { "canela": 5 } },
-        { "id": "iva", "title": "Calculadora de productos con IVA", "description": "## Objetivo\nCrea una calculadora de compra que sume varios productos y aplique IVA al total.\n\n## Requisitos\n- Pide la cantidad de productos.\n- Para cada producto, solicita nombre, precio y cantidad.\n- Calcula subtotal, IVA y total a pagar.\n- Muestra un resumen legible de la compra.\n\nUsa una constante para el porcentaje de IVA y valida que precios y cantidades sean positivos.", "points": 15, "bonus": false, "icon": "calculator", "scores": { "booleanos": 15 } }
+        {
+          "id": "reinas",
+          "title": "4 Reinas",
+          "description": "## Objetivo\nUbica cuatro reinas en un tablero de ajedrez de 4 x 4 sin que ninguna pueda atacar a otra.\n\n## Reglas\n- Dos reinas no pueden compartir fila.\n- Dos reinas no pueden compartir columna.\n- Dos reinas no pueden compartir diagonal.\n\nRepresenta el tablero con texto y explica la estrategia que usaste para comprobar cada posición.",
+          "points": 5,
+          "bonus": false,
+          "icon": "queen",
+          "scores": {
+            "canela": 5,
+            "dinamita": 5
+          }
+        },
+        {
+          "id": "monedas",
+          "title": "Reto de las Monedas",
+          "description": "## Objetivo\nDetermina una combinación de monedas que alcance exactamente el valor solicitado por el usuario.\n\n## Requisitos\n- Pide un valor objetivo.\n- Usa monedas de 1, 5, 10 y 25.\n- Muestra cuántas monedas de cada tipo se utilizaron.\n- Verifica que la suma final sea igual al objetivo.\n\n💡 Piensa en cómo tomar primero las monedas de mayor valor sin exceder el total.",
+          "points": 5,
+          "bonus": false,
+          "icon": "coins",
+          "scores": {
+            "dinamita": 5
+          }
+        },
+        {
+          "id": "camino",
+          "title": "El camino más corto",
+          "description": "## Objetivo\nEncuentra el camino de menor costo desde el nodo **1** hasta el nodo **8** en el siguiente grafo dirigido.\n\n![Grafo dirigido de caminos](/grafo-caminos.svg)\n\n## Requisitos\n- Indica los nodos que recorres en orden.\n- Calcula el costo total de cada alternativa importante.\n- Justifica por qué tu ruta es la de menor costo.\n\n💡 Puedes usar una tabla con: nodo actual, costo acumulado y mejor ruta conocida.",
+          "points": 5,
+          "bonus": false,
+          "icon": "route",
+          "scores": {
+            "canela": 5
+          }
+        },
+        {
+          "id": "iva",
+          "title": "Calculadora de productos con IVA",
+          "description": "## Objetivo\nCrea una calculadora de compra que sume varios productos y aplique IVA al total.\n\n## Requisitos\n- Pide la cantidad de productos.\n- Para cada producto, solicita nombre, precio y cantidad.\n- Calcula subtotal, IVA y total a pagar.\n- Muestra un resumen legible de la compra.\n\nUsa una constante para el porcentaje de IVA y valida que precios y cantidades sean positivos.",
+          "points": 15,
+          "bonus": false,
+          "icon": "calculator",
+          "scores": {
+            "booleanos": 15
+          }
+        }
       ]
     },
     {
       "number": 2,
       "title": "Retos de programación",
+      "closesAt": "2026-09-26T14:47:00.000Z",
       "status": "active",
       "activities": [
-        { "id": "fizzbuzz", "title": "FizzBuzz", "description": "## Reto 1 · 5 puntos\nCrea un programa que recorra los números del **1 al 100**. Para cada número: muestra `Fizz` si es múltiplo de 3, `Buzz` si es múltiplo de 5, `FizzBuzz` si es múltiplo de ambos y el número en cualquier otro caso.\n\n## Pista\n- ¿Cómo sabes si un número es divisible exactamente por otro?\n- ¿Qué tienen de especial 15, 30, 45 y 60?\n- Cuidado: hay números que cumplen dos condiciones. El orden de las comprobaciones cambia el resultado.", "points": 5, "bonus": false, "icon": "zap", "scores": {} },
-        { "id": "primo", "title": "¿Es un número primo?", "description": "## Reto 2 · 10 puntos\nSolicita al usuario un entero mayor que 1 y determina si es primo. Un número primo solamente puede dividirse exactamente entre 1 y él mismo.\n\n```text\nIngrese un número: 17\n17 es un número primo\n\nIngrese un número: 20\n20 no es un número primo\n```\n\n## Pista\nPara demostrar que un número **no** es primo basta con encontrar una sola división exacta. Usa una repetición para probar divisores y una variable para recordar si encontraste alguno.", "points": 10, "bonus": false, "icon": "search", "scores": {} },
-        { "id": "fibonacci", "title": "Sucesión de Fibonacci", "description": "## Reto 3 · 15 puntos\nGenera y muestra los primeros 20 números de Fibonacci. La sucesión comienza con `0, 1, 1, 2, 3, 5, 8, 13, 21...`. Cada número es la suma de los dos anteriores.\n\n## Pista\nNo necesitas guardar toda la secuencia: conserva dos números, calcula el siguiente y actualiza los valores en el orden correcto para no perder el que todavía necesitas.\n\n```text\n0 + 1 = 1\n1 + 1 = 2\n1 + 2 = 3\n```", "points": 15, "bonus": false, "icon": "spiral", "scores": {} },
-        { "id": "dibujando", "title": "Dibujando con Python", "description": "## Reto 4 · 20 puntos\nEl usuario debe elegir una figura y su tamaño:\n\n1. Cuadrado\n2. Triángulo\n\nPara `Figura: 1` y `Tamaño: 5`, dibuja cinco filas de cinco asteriscos. Para `Figura: 2` y `Tamaño: 5`, dibuja filas de 1, 2, 3, 4 y 5 asteriscos.\n\n## Pista\nPrimero resuelve cómo dibujar una fila y luego cuántas veces repetirla. En el cuadrado todas las filas tienen el mismo tamaño; en el triángulo, la cantidad de símbolos coincide con el número de fila.", "points": 20, "bonus": false, "icon": "blocks", "scores": {} },
-        { "id": "pokemon", "title": "Batalla Pokémon", "description": "## Reto 5 · 50 puntos\nCrea un simulador con tres tipos: 🔥 Fuego, 💧 Agua y 🌿 Planta. Fuego vence a Planta, Planta vence a Agua y Agua vence a Fuego.\n\nPide tipo y ataque del atacante, y tipo y defensa del defensor. Ataque y defensa deben estar entre 1 y 100; vuelve a pedirlos si son inválidos.\n\n- Ventaja: `ataque × 2`\n- Normal: `ataque × 1`\n- Desventaja: `ataque × 0.5`\n\nCalcula: `Daño = 50 × (Ataque / Defensa) × Efectividad`.\n\n```text\n===== BATALLA =====\nAtacante: Fuego\nAtaque: 80\nDefensor: Planta\nDefensa: 60\n\n¡Es súper efectivo!\nDaño causado: 133.33\n```\n\n## Pista\nPrimero identifica las tres situaciones donde el atacante gana: Fuego → Planta, Planta → Agua y Agua → Fuego. Después identifica las desventajas; cualquier otro caso tiene efectividad normal.", "points": 50, "bonus": false, "icon": "crown", "scores": {} },
-        { "id": "figura", "title": "Tercera figura creada por el equipo", "description": "## Bonus · 5 puntos\nAgrega una tercera figura diferente, diseñada por el equipo. Debe pedir tamaño y dibujarse con repeticiones. Explica en un comentario cómo se calcula cada fila.", "points": 5, "bonus": true, "icon": "star", "scores": {} },
-        { "id": "repetible", "title": "Batalla repetible", "description": "## Bonus · 10 puntos\nCuando el combate básico funcione, permite realizar ataques sin volver a ejecutar el archivo. El usuario debe elegir:\n\n1. Realizar otro ataque\n2. Terminar batalla\n\nEl programa continúa hasta elegir terminar o hasta que el defensor se quede sin vida.", "points": 10, "bonus": true, "icon": "flame", "scores": {} }
+        {
+          "id": "fizzbuzz",
+          "title": "FizzBuzz",
+          "description": "## Reto 1 · 5 puntos\nCrea un programa que recorra los números del **1 al 100**. Para cada número: muestra `Fizz` si es múltiplo de 3, `Buzz` si es múltiplo de 5, `FizzBuzz` si es múltiplo de ambos y el número en cualquier otro caso.\n\n## Pista\n- ¿Cómo sabes si un número es divisible exactamente por otro?\n- ¿Qué tienen de especial 15, 30, 45 y 60?\n- Cuidado: hay números que cumplen dos condiciones. El orden de las comprobaciones cambia el resultado.",
+          "points": 5,
+          "bonus": false,
+          "icon": "zap",
+          "scores": {}
+        },
+        {
+          "id": "primo",
+          "title": "¿Es un número primo?",
+          "description": "## Reto 2 · 10 puntos\nSolicita al usuario un entero mayor que 1 y determina si es primo. Un número primo solamente puede dividirse exactamente entre 1 y él mismo.\n\n```text\nIngrese un número: 17\n17 es un número primo\n\nIngrese un número: 20\n20 no es un número primo\n```\n\n## Pista\nPara demostrar que un número **no** es primo basta con encontrar una sola división exacta. Usa una repetición para probar divisores y una variable para recordar si encontraste alguno.",
+          "points": 10,
+          "bonus": false,
+          "icon": "search",
+          "scores": {}
+        },
+        {
+          "id": "fibonacci",
+          "title": "Sucesión de Fibonacci",
+          "description": "## Reto 3 · 15 puntos\nGenera y muestra los primeros 20 números de Fibonacci. La sucesión comienza con `0, 1, 1, 2, 3, 5, 8, 13, 21...`. Cada número es la suma de los dos anteriores.\n\n## Pista\nNo necesitas guardar toda la secuencia: conserva dos números, calcula el siguiente y actualiza los valores en el orden correcto para no perder el que todavía necesitas.\n\n```text\n0 + 1 = 1\n1 + 1 = 2\n1 + 2 = 3\n```",
+          "points": 15,
+          "bonus": false,
+          "icon": "spiral",
+          "scores": {}
+        },
+        {
+          "id": "dibujando",
+          "title": "Dibujando con Python",
+          "description": "## Reto 4 · 20 puntos\nEl usuario debe elegir una figura y su tamaño:\n\n1. Cuadrado\n2. Triángulo\n\nPara `Figura: 1` y `Tamaño: 5`, dibuja cinco filas de cinco asteriscos. Para `Figura: 2` y `Tamaño: 5`, dibuja filas de 1, 2, 3, 4 y 5 asteriscos.\n\n## Pista\nPrimero resuelve cómo dibujar una fila y luego cuántas veces repetirla. En el cuadrado todas las filas tienen el mismo tamaño; en el triángulo, la cantidad de símbolos coincide con el número de fila.",
+          "points": 20,
+          "bonus": false,
+          "icon": "blocks",
+          "scores": {}
+        },
+        {
+          "id": "pokemon",
+          "title": "Batalla Pokémon",
+          "description": "## Reto 5 · 50 puntos\nCrea un simulador con tres tipos: 🔥 Fuego, 💧 Agua y 🌿 Planta. Fuego vence a Planta, Planta vence a Agua y Agua vence a Fuego.\n\nPide tipo y ataque del atacante, y tipo y defensa del defensor. Ataque y defensa deben estar entre 1 y 100; vuelve a pedirlos si son inválidos.\n\n- Ventaja: `ataque × 2`\n- Normal: `ataque × 1`\n- Desventaja: `ataque × 0.5`\n\nCalcula: `Daño = 50 × (Ataque / Defensa) × Efectividad`.\n\n```text\n===== BATALLA =====\nAtacante: Fuego\nAtaque: 80\nDefensor: Planta\nDefensa: 60\n\n¡Es súper efectivo!\nDaño causado: 133.33\n```\n\n## Pista\nPrimero identifica las tres situaciones donde el atacante gana: Fuego → Planta, Planta → Agua y Agua → Fuego. Después identifica las desventajas; cualquier otro caso tiene efectividad normal.",
+          "points": 50,
+          "bonus": false,
+          "icon": "crown",
+          "scores": {}
+        },
+        {
+          "id": "figura",
+          "title": "Tercera figura creada por el equipo",
+          "description": "## Bonus · 5 puntos\nAgrega una tercera figura diferente, diseñada por el equipo. Debe pedir tamaño y dibujarse con repeticiones. Explica en un comentario cómo se calcula cada fila.",
+          "points": 5,
+          "bonus": true,
+          "icon": "star",
+          "scores": {}
+        },
+        {
+          "id": "repetible",
+          "title": "Batalla repetible",
+          "description": "## Bonus · 10 puntos\nCuando el combate básico funcione, permite realizar ataques sin volver a ejecutar el archivo. El usuario debe elegir:\n\n1. Realizar otro ataque\n2. Terminar batalla\n\nEl programa continúa hasta elegir terminar o hasta que el defensor se quede sin vida.",
+          "points": 10,
+          "bonus": true,
+          "icon": "flame",
+          "scores": {}
+        }
       ]
     },
-    { "number": 3, "title": "Próximos retos", "status": "upcoming", "activities": [] },
-    { "number": 4, "title": "Próximos retos", "status": "upcoming", "activities": [] },
-    { "number": 5, "title": "Próximos retos", "status": "upcoming", "activities": [] },
-    { "number": 6, "title": "Próximos retos", "status": "upcoming", "activities": [] },
-    { "number": 7, "title": "Próximos retos", "status": "upcoming", "activities": [] },
-    { "number": 8, "title": "Próximos retos", "status": "upcoming", "activities": [] }
+    {
+      "number": 3,
+      "title": "Próximos retos",
+      "status": "upcoming",
+      "activities": []
+    },
+    {
+      "number": 4,
+      "title": "Próximos retos",
+      "status": "upcoming",
+      "activities": []
+    },
+    {
+      "number": 5,
+      "title": "Próximos retos",
+      "status": "upcoming",
+      "activities": []
+    },
+    {
+      "number": 6,
+      "title": "Próximos retos",
+      "status": "upcoming",
+      "activities": []
+    },
+    {
+      "number": 7,
+      "title": "Próximos retos",
+      "status": "upcoming",
+      "activities": []
+    },
+    {
+      "number": 8,
+      "title": "Próximos retos",
+      "status": "upcoming",
+      "activities": []
+    }
   ]
 }
