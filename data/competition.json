@@ -198,6 +198,15 @@
           "bonus": false,
           "icon": "code",
           "scores": {}
+        },
+        {
+          "id": "8963d88a-f10e-4a6a-8dcf-0acfef313e52",
+          "title": "⭐ BONUS — Podio",
+          "description": "El programa deberá determinar y mostrar correctamente los **tres puntajes más altos del torneo**:\n\n```text\n🥇 Primer lugar\n🥈 Segundo lugar\n🥉 Tercer lugar\n```",
+          "points": 10,
+          "bonus": false,
+          "icon": "code",
+          "scores": {}
         }
       ]
     },
