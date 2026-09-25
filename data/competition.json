@@ -162,7 +162,17 @@
       "title": "Semana 3: Python Intermedio",
       "closesAt": "2026-09-26T18:00:00.000Z",
       "status": "upcoming",
-      "activities": []
+      "activities": [
+        {
+          "id": "348d527d-123a-46b2-990e-957d49e45d51",
+          "title": "🥉 RETO 1 — El inventario del aventurero",
+          "description": "## 🎯 Puntaje: 20 puntos + 5 puntos bonus\n\nUn aventurero comienza su viaje con una mochila vacía:\n\n```python\nmochila = []\n```\n\nEl programa deberá mostrar repetidamente el siguiente menú:\n\n```text\n=== MOCHILA ===\n\n1. Agregar objeto\n2. Eliminar objeto\n3. Mostrar mochila\n4. Buscar objeto\n5. Salir\n```\n\n## Requisitos\n\n### 1. Agregar objeto\n\nSolicitar el nombre de un objeto y agregarlo a la mochila.\n\n### 2. Eliminar objeto\n\nSolicitar el nombre del objeto que se desea eliminar.\n\nEl objeto solamente deberá eliminarse si realmente existe dentro de la mochila.\n\n### 3. Mostrar mochila\n\nMostrar todos los objetos guardados **uno por uno y numerados**.\n\nEjemplo:\n\n```text\n=== CONTENIDO DE LA MOCHILA ===\n\n1. Espada\n2. Poción\n3. Escudo\n```\n\n### 4. Buscar objeto\n\nSolicitar el nombre de un objeto e indicar si se encuentra o no dentro de la mochila.\n\n### 5. Salir\n\nFinalizar el programa.\n\nEl menú deberá continuar apareciendo mientras el usuario no seleccione la opción **Salir**.\n\n---\n\n## 💡 Pista\n\nNo intenten construir todo el menú de una sola vez.\n\nPrimero consigan que funcione:\n\n```text\nLista vacía\n     ↓\nAgregar objetos\n     ↓\nMostrar objetos\n```\n\nCuando eso funcione, incorporen las opciones de eliminar y buscar.\n\nPregúntense:\n\n> ¿Qué estructura permite repetir el menú hasta que el usuario decida salir?\n\nY antes de intentar eliminar un elemento:\n\n> ¿Cómo puedo comprobar si un objeto pertenece a una lista?",
+          "points": 20,
+          "bonus": false,
+          "icon": "code",
+          "scores": {}
+        }
+      ]
     },
     {
       "number": 4,
