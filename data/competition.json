@@ -195,7 +195,7 @@
           "title": "⭐ BONUS — Mochila ordenada",
           "description": "Agregar una nueva opción a la mochila del aventurero:\n\n```text\n6. Ordenar mochila\n```\n\nEsta opción deberá permitir mostrar los objetos de la mochila **ordenados alfabéticamente**.",
           "points": 5,
-          "bonus": false,
+          "bonus": true,
           "icon": "code",
           "scores": {}
         },
