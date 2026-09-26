@@ -99,7 +99,12 @@
           "points": 5,
           "bonus": false,
           "icon": "zap",
-          "scores": {}
+          "scores": {
+            "canela": 5,
+            "booleanos": 5,
+            "dinamita": 0,
+            "otro": 0
+          }
         },
         {
           "id": "primo",
