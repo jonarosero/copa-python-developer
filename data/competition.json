@@ -141,7 +141,12 @@
           "points": 20,
           "bonus": false,
           "icon": "blocks",
-          "scores": {}
+          "scores": {
+            "canela": 0,
+            "booleanos": 0,
+            "dinamita": 20,
+            "otro": 0
+          }
         },
         {
           "id": "pokemon",
