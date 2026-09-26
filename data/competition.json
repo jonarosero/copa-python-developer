@@ -113,7 +113,12 @@
           "points": 10,
           "bonus": false,
           "icon": "search",
-          "scores": {}
+          "scores": {
+            "canela": 10,
+            "booleanos": 10,
+            "dinamita": 0,
+            "otro": 0
+          }
         },
         {
           "id": "fibonacci",
