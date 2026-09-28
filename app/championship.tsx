@@ -145,6 +145,7 @@ export default function Championship({ initial, unavailable = false, initialView
       if (!response.ok || cancelled) return;
       snapshotRef.current = result;
       setSnapshot(result);
+      setSelectedWeek(result.data.weeks.find(week => week.status === "active")?.number ?? 8);
       setLoadError(false);
     }).catch(() => { if (!cancelled) setLoadError(true); });
     return () => { cancelled = true; };
