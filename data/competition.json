@@ -1,9 +1,37 @@
 {
   "teams": [
-    { "id": "canela", "name": "Grupo Canela", "shortName": "", "color": "orange", "members": [], "description": "" },
-    { "id": "booleanos", "name": "Los Booleanos", "shortName": "", "color": "mint", "members": [], "description": "" },
-    { "id": "dinamita", "name": "Equipo Alfa Buena Maravilla Onda Dinamita Escuadrón Lobo", "shortName": "Triple Dinamita", "color": "violet", "members": [], "description": "" },
-    { "id": "otro", "name": "Code Warriors", "shortName": "", "color": "blue", "members": [], "description": "" }
+    {
+      "id": "canela",
+      "name": "Grupo Canela",
+      "shortName": "",
+      "color": "orange",
+      "members": [],
+      "description": ""
+    },
+    {
+      "id": "booleanos",
+      "name": "Los Booleanos",
+      "shortName": "",
+      "color": "mint",
+      "members": [],
+      "description": ""
+    },
+    {
+      "id": "dinamita",
+      "name": "Equipo Alfa Buena Maravilla Onda Dinamita Escuadrón Lobo",
+      "shortName": "Triple Dinamita",
+      "color": "violet",
+      "members": [],
+      "description": ""
+    },
+    {
+      "id": "otro",
+      "name": "Code Warriors",
+      "shortName": "",
+      "color": "blue",
+      "members": [],
+      "description": ""
+    }
   ],
   "weeks": [
     {
@@ -11,31 +39,240 @@
       "title": "Lógica y primeros programas",
       "status": "closed",
       "activities": [
-        { "id": "reinas", "title": "4 Reinas", "description": "## Objetivo\nUbica cuatro reinas en un tablero de ajedrez de 4 x 4 sin que ninguna pueda atacar a otra.\n\n## Reglas\n- Dos reinas no pueden compartir fila.\n- Dos reinas no pueden compartir columna.\n- Dos reinas no pueden compartir diagonal.\n\nRepresenta el tablero con texto y explica la estrategia que usaste para comprobar cada posición.", "points": 5, "bonus": false, "icon": "queen", "scores": { "canela": 5, "dinamita": 5 } },
-        { "id": "monedas", "title": "Reto de las Monedas", "description": "## Objetivo\nDetermina una combinación de monedas que alcance exactamente el valor solicitado por el usuario.\n\n## Requisitos\n- Pide un valor objetivo.\n- Usa monedas de 1, 5, 10 y 25.\n- Muestra cuántas monedas de cada tipo se utilizaron.\n- Verifica que la suma final sea igual al objetivo.\n\n💡 Piensa en cómo tomar primero las monedas de mayor valor sin exceder el total.", "points": 5, "bonus": false, "icon": "coins", "scores": { "dinamita": 5 } },
-        { "id": "camino", "title": "El camino más corto", "description": "## Objetivo\nEncuentra el camino de menor costo desde el nodo **1** hasta el nodo **8** en el siguiente grafo dirigido.\n\n![Grafo dirigido de caminos](/grafo-caminos.svg)\n\n## Requisitos\n- Indica los nodos que recorres en orden.\n- Calcula el costo total de cada alternativa importante.\n- Justifica por qué tu ruta es la de menor costo.\n\n💡 Puedes usar una tabla con: nodo actual, costo acumulado y mejor ruta conocida.", "points": 5, "bonus": false, "icon": "route", "scores": { "canela": 5 } },
-        { "id": "iva", "title": "Calculadora de productos con IVA", "description": "## Objetivo\nCrea una calculadora de compra que sume varios productos y aplique IVA al total.\n\n## Requisitos\n- Pide la cantidad de productos.\n- Para cada producto, solicita nombre, precio y cantidad.\n- Calcula subtotal, IVA y total a pagar.\n- Muestra un resumen legible de la compra.\n\nUsa una constante para el porcentaje de IVA y valida que precios y cantidades sean positivos.", "points": 15, "bonus": false, "icon": "calculator", "scores": { "booleanos": 15 } }
+        {
+          "id": "reinas",
+          "title": "4 Reinas",
+          "description": "## Objetivo\nUbica cuatro reinas en un tablero de ajedrez de 4 x 4 sin que ninguna pueda atacar a otra.\n\n## Reglas\n- Dos reinas no pueden compartir fila.\n- Dos reinas no pueden compartir columna.\n- Dos reinas no pueden compartir diagonal.\n\nRepresenta el tablero con texto y explica la estrategia que usaste para comprobar cada posición.",
+          "points": 5,
+          "bonus": false,
+          "icon": "queen",
+          "scores": {
+            "canela": 5,
+            "dinamita": 5
+          }
+        },
+        {
+          "id": "monedas",
+          "title": "Reto de las Monedas",
+          "description": "## Objetivo\nDetermina una combinación de monedas que alcance exactamente el valor solicitado por el usuario.\n\n## Requisitos\n- Pide un valor objetivo.\n- Usa monedas de 1, 5, 10 y 25.\n- Muestra cuántas monedas de cada tipo se utilizaron.\n- Verifica que la suma final sea igual al objetivo.\n\n💡 Piensa en cómo tomar primero las monedas de mayor valor sin exceder el total.",
+          "points": 5,
+          "bonus": false,
+          "icon": "coins",
+          "scores": {
+            "dinamita": 5
+          }
+        },
+        {
+          "id": "camino",
+          "title": "El camino más corto",
+          "description": "## Objetivo\nEncuentra el camino de menor costo desde el nodo **1** hasta el nodo **8** en el siguiente grafo dirigido.\n\n![Grafo dirigido de caminos](/grafo-caminos.svg)\n\n## Requisitos\n- Indica los nodos que recorres en orden.\n- Calcula el costo total de cada alternativa importante.\n- Justifica por qué tu ruta es la de menor costo.\n\n💡 Puedes usar una tabla con: nodo actual, costo acumulado y mejor ruta conocida.",
+          "points": 5,
+          "bonus": false,
+          "icon": "route",
+          "scores": {
+            "canela": 5
+          }
+        },
+        {
+          "id": "iva",
+          "title": "Calculadora de productos con IVA",
+          "description": "## Objetivo\nCrea una calculadora de compra que sume varios productos y aplique IVA al total.\n\n## Requisitos\n- Pide la cantidad de productos.\n- Para cada producto, solicita nombre, precio y cantidad.\n- Calcula subtotal, IVA y total a pagar.\n- Muestra un resumen legible de la compra.\n\nUsa una constante para el porcentaje de IVA y valida que precios y cantidades sean positivos.",
+          "points": 15,
+          "bonus": false,
+          "icon": "calculator",
+          "scores": {
+            "booleanos": 15
+          }
+        }
       ]
     },
     {
       "number": 2,
       "title": "Retos de programación",
-      "status": "active",
+      "closesAt": "2026-10-03T14:00:00.000Z",
+      "status": "closed",
       "activities": [
-        { "id": "fizzbuzz", "title": "FizzBuzz", "description": "## Reto 1 · 5 puntos\nCrea un programa que recorra los números del **1 al 100**. Para cada número: muestra `Fizz` si es múltiplo de 3, `Buzz` si es múltiplo de 5, `FizzBuzz` si es múltiplo de ambos y el número en cualquier otro caso.\n\n## Pista\n- ¿Cómo sabes si un número es divisible exactamente por otro?\n- ¿Qué tienen de especial 15, 30, 45 y 60?\n- Cuidado: hay números que cumplen dos condiciones. El orden de las comprobaciones cambia el resultado.", "points": 5, "bonus": false, "icon": "zap", "scores": {} },
-        { "id": "primo", "title": "¿Es un número primo?", "description": "## Reto 2 · 10 puntos\nSolicita al usuario un entero mayor que 1 y determina si es primo. Un número primo solamente puede dividirse exactamente entre 1 y él mismo.\n\n```text\nIngrese un número: 17\n17 es un número primo\n\nIngrese un número: 20\n20 no es un número primo\n```\n\n## Pista\nPara demostrar que un número **no** es primo basta con encontrar una sola división exacta. Usa una repetición para probar divisores y una variable para recordar si encontraste alguno.", "points": 10, "bonus": false, "icon": "search", "scores": {} },
-        { "id": "fibonacci", "title": "Sucesión de Fibonacci", "description": "## Reto 3 · 15 puntos\nGenera y muestra los primeros 20 números de Fibonacci. La sucesión comienza con `0, 1, 1, 2, 3, 5, 8, 13, 21...`. Cada número es la suma de los dos anteriores.\n\n## Pista\nNo necesitas guardar toda la secuencia: conserva dos números, calcula el siguiente y actualiza los valores en el orden correcto para no perder el que todavía necesitas.\n\n```text\n0 + 1 = 1\n1 + 1 = 2\n1 + 2 = 3\n```", "points": 15, "bonus": false, "icon": "spiral", "scores": {} },
-        { "id": "dibujando", "title": "Dibujando con Python", "description": "## Reto 4 · 20 puntos\nEl usuario debe elegir una figura y su tamaño:\n\n1. Cuadrado\n2. Triángulo\n\nPara `Figura: 1` y `Tamaño: 5`, dibuja cinco filas de cinco asteriscos. Para `Figura: 2` y `Tamaño: 5`, dibuja filas de 1, 2, 3, 4 y 5 asteriscos.\n\n## Pista\nPrimero resuelve cómo dibujar una fila y luego cuántas veces repetirla. En el cuadrado todas las filas tienen el mismo tamaño; en el triángulo, la cantidad de símbolos coincide con el número de fila.", "points": 20, "bonus": false, "icon": "blocks", "scores": {} },
-        { "id": "pokemon", "title": "Batalla Pokémon", "description": "## Reto 5 · 50 puntos\nCrea un simulador con tres tipos: 🔥 Fuego, 💧 Agua y 🌿 Planta. Fuego vence a Planta, Planta vence a Agua y Agua vence a Fuego.\n\nPide tipo y ataque del atacante, y tipo y defensa del defensor. Ataque y defensa deben estar entre 1 y 100; vuelve a pedirlos si son inválidos.\n\n- Ventaja: `ataque × 2`\n- Normal: `ataque × 1`\n- Desventaja: `ataque × 0.5`\n\nCalcula: `Daño = 50 × (Ataque / Defensa) × Efectividad`.\n\n```text\n===== BATALLA =====\nAtacante: Fuego\nAtaque: 80\nDefensor: Planta\nDefensa: 60\n\n¡Es súper efectivo!\nDaño causado: 133.33\n```\n\n## Pista\nPrimero identifica las tres situaciones donde el atacante gana: Fuego → Planta, Planta → Agua y Agua → Fuego. Después identifica las desventajas; cualquier otro caso tiene efectividad normal.", "points": 50, "bonus": false, "icon": "crown", "scores": {} },
-        { "id": "figura", "title": "Tercera figura creada por el equipo", "description": "## Bonus · 5 puntos\nAgrega una tercera figura diferente, diseñada por el equipo. Debe pedir tamaño y dibujarse con repeticiones. Explica en un comentario cómo se calcula cada fila.", "points": 5, "bonus": true, "icon": "star", "scores": {} },
-        { "id": "repetible", "title": "Batalla repetible", "description": "## Bonus · 10 puntos\nCuando el combate básico funcione, permite realizar ataques sin volver a ejecutar el archivo. El usuario debe elegir:\n\n1. Realizar otro ataque\n2. Terminar batalla\n\nEl programa continúa hasta elegir terminar o hasta que el defensor se quede sin vida.", "points": 10, "bonus": true, "icon": "flame", "scores": {} }
+        {
+          "id": "fizzbuzz",
+          "title": "FizzBuzz",
+          "description": "## Reto 1 · 5 puntos\nCrea un programa que recorra los números del **1 al 100**. Para cada número: muestra `Fizz` si es múltiplo de 3, `Buzz` si es múltiplo de 5, `FizzBuzz` si es múltiplo de ambos y el número en cualquier otro caso.\n\n## Pista\n- ¿Cómo sabes si un número es divisible exactamente por otro?\n- ¿Qué tienen de especial 15, 30, 45 y 60?\n- Cuidado: hay números que cumplen dos condiciones. El orden de las comprobaciones cambia el resultado.",
+          "points": 5,
+          "bonus": false,
+          "icon": "zap",
+          "scores": {
+            "canela": 5,
+            "booleanos": 5,
+            "dinamita": 0,
+            "otro": 5
+          }
+        },
+        {
+          "id": "primo",
+          "title": "¿Es un número primo?",
+          "description": "## Reto 2 · 10 puntos\nSolicita al usuario un entero mayor que 1 y determina si es primo. Un número primo solamente puede dividirse exactamente entre 1 y él mismo.\n\n```text\nIngrese un número: 17\n17 es un número primo\n\nIngrese un número: 20\n20 no es un número primo\n```\n\n## Pista\nPara demostrar que un número **no** es primo basta con encontrar una sola división exacta. Usa una repetición para probar divisores y una variable para recordar si encontraste alguno.",
+          "points": 10,
+          "bonus": false,
+          "icon": "search",
+          "scores": {
+            "canela": 10,
+            "booleanos": 10,
+            "dinamita": 0,
+            "otro": 10
+          }
+        },
+        {
+          "id": "fibonacci",
+          "title": "Sucesión de Fibonacci",
+          "description": "## Reto 3 · 15 puntos\nGenera y muestra los primeros 20 números de Fibonacci. La sucesión comienza con `0, 1, 1, 2, 3, 5, 8, 13, 21...`. Cada número es la suma de los dos anteriores.\n\n## Pista\nNo necesitas guardar toda la secuencia: conserva dos números, calcula el siguiente y actualiza los valores en el orden correcto para no perder el que todavía necesitas.\n\n```text\n0 + 1 = 1\n1 + 1 = 2\n1 + 2 = 3\n```",
+          "points": 15,
+          "bonus": false,
+          "icon": "spiral",
+          "scores": {
+            "canela": 15,
+            "booleanos": 15,
+            "dinamita": 0,
+            "otro": 15
+          }
+        },
+        {
+          "id": "dibujando",
+          "title": "Dibujando con Python",
+          "description": "## Reto 4 · 20 puntos\nEl usuario debe elegir una figura y su tamaño:\n\n1. Cuadrado\n2. Triángulo\n\nPara `Figura: 1` y `Tamaño: 5`, dibuja cinco filas de cinco asteriscos. Para `Figura: 2` y `Tamaño: 5`, dibuja filas de 1, 2, 3, 4 y 5 asteriscos.\n\n## Pista\nPrimero resuelve cómo dibujar una fila y luego cuántas veces repetirla. En el cuadrado todas las filas tienen el mismo tamaño; en el triángulo, la cantidad de símbolos coincide con el número de fila.",
+          "points": 20,
+          "bonus": false,
+          "icon": "blocks",
+          "scores": {
+            "canela": 0,
+            "booleanos": 20,
+            "dinamita": 20,
+            "otro": 0
+          }
+        },
+        {
+          "id": "pokemon",
+          "title": "Batalla Pokémon",
+          "description": "## Reto 5 · 50 puntos\nCrea un simulador con tres tipos: 🔥 Fuego, 💧 Agua y 🌿 Planta. Fuego vence a Planta, Planta vence a Agua y Agua vence a Fuego.\n\nPide tipo y ataque del atacante, y tipo y defensa del defensor. Ataque y defensa deben estar entre 1 y 100; vuelve a pedirlos si son inválidos.\n\n- Ventaja: `ataque × 2`\n- Normal: `ataque × 1`\n- Desventaja: `ataque × 0.5`\n\nCalcula: `Daño = 50 × (Ataque / Defensa) × Efectividad`.\n\n```text\n===== BATALLA =====\nAtacante: Fuego\nAtaque: 80\nDefensor: Planta\nDefensa: 60\n\n¡Es súper efectivo!\nDaño causado: 133.33\n```\n\n## Pista\nPrimero identifica las tres situaciones donde el atacante gana: Fuego → Planta, Planta → Agua y Agua → Fuego. Después identifica las desventajas; cualquier otro caso tiene efectividad normal.",
+          "points": 50,
+          "bonus": false,
+          "icon": "crown",
+          "scores": {}
+        },
+        {
+          "id": "figura",
+          "title": "Tercera figura creada por el equipo",
+          "description": "## Bonus · 5 puntos\nAgrega una tercera figura diferente, diseñada por el equipo. Debe pedir tamaño y dibujarse con repeticiones. Explica en un comentario cómo se calcula cada fila.",
+          "points": 5,
+          "bonus": true,
+          "icon": "star",
+          "scores": {
+            "canela": 0,
+            "booleanos": 5,
+            "dinamita": 0,
+            "otro": 5
+          }
+        },
+        {
+          "id": "repetible",
+          "title": "Batalla repetible",
+          "description": "## Bonus · 10 puntos\nCuando el combate básico funcione, permite realizar ataques sin volver a ejecutar el archivo. El usuario debe elegir:\n\n1. Realizar otro ataque\n2. Terminar batalla\n\nEl programa continúa hasta elegir terminar o hasta que el defensor se quede sin vida.",
+          "points": 10,
+          "bonus": true,
+          "icon": "flame",
+          "scores": {}
+        }
       ]
     },
-    { "number": 3, "title": "Próximos retos", "status": "upcoming", "activities": [] },
-    { "number": 4, "title": "Próximos retos", "status": "upcoming", "activities": [] },
-    { "number": 5, "title": "Próximos retos", "status": "upcoming", "activities": [] },
-    { "number": 6, "title": "Próximos retos", "status": "upcoming", "activities": [] },
-    { "number": 7, "title": "Próximos retos", "status": "upcoming", "activities": [] },
-    { "number": 8, "title": "Próximos retos", "status": "upcoming", "activities": [] }
+    {
+      "number": 3,
+      "title": "Semana 3: Python Intermedio",
+      "closesAt": "2026-10-03T14:10:00.000Z",
+      "status": "active",
+      "activities": [
+        {
+          "id": "348d527d-123a-46b2-990e-957d49e45d51",
+          "title": "🥉 RETO 1 — El inventario del aventurero",
+          "description": "## 🎯 Puntaje: 20 puntos + 5 puntos bonus\n\nUn aventurero comienza su viaje con una mochila vacía:\n\n```python\nmochila = []\n```\n\nEl programa deberá mostrar repetidamente el siguiente menú:\n\n```text\n=== MOCHILA ===\n\n1. Agregar objeto\n2. Eliminar objeto\n3. Mostrar mochila\n4. Buscar objeto\n5. Salir\n```\n\n## Requisitos\n\n### 1. Agregar objeto\n\nSolicitar el nombre de un objeto y agregarlo a la mochila.\n\n### 2. Eliminar objeto\n\nSolicitar el nombre del objeto que se desea eliminar.\n\nEl objeto solamente deberá eliminarse si realmente existe dentro de la mochila.\n\n### 3. Mostrar mochila\n\nMostrar todos los objetos guardados **uno por uno y numerados**.\n\nEjemplo:\n\n```text\n=== CONTENIDO DE LA MOCHILA ===\n\n1. Espada\n2. Poción\n3. Escudo\n```\n\n### 4. Buscar objeto\n\nSolicitar el nombre de un objeto e indicar si se encuentra o no dentro de la mochila.\n\n### 5. Salir\n\nFinalizar el programa.\n\nEl menú deberá continuar apareciendo mientras el usuario no seleccione la opción **Salir**.\n\n---\n\n## 💡 Pista\n\nNo intenten construir todo el menú de una sola vez.\n\nPrimero consigan que funcione:\n\n```text\nLista vacía\n     ↓\nAgregar objetos\n     ↓\nMostrar objetos\n```\n\nCuando eso funcione, incorporen las opciones de eliminar y buscar.\n\nPregúntense:\n\n> ¿Qué estructura permite repetir el menú hasta que el usuario decida salir?\n\nY antes de intentar eliminar un elemento:\n\n> ¿Cómo puedo comprobar si un objeto pertenece a una lista?",
+          "points": 20,
+          "bonus": false,
+          "icon": "code",
+          "scores": {}
+        },
+        {
+          "id": "f825cd2a-d2de-4eef-ae1b-3162faa25213",
+          "title": "🥈 RETO 2 — Torneo de videojuegos",
+          "description": "Se realizará un pequeño torneo con **5 jugadores**.\n\nEl programa deberá solicitar para cada jugador:\n\n```text\nNombre:\nPuntaje:\n```\n\nLos nombres deberán almacenarse en una lista y los puntajes en otra lista.\n\nConceptualmente tendremos algo similar a:\n\n```text\nJugadores:  Ana   Luis   Pedro   María   Juan\nPuntajes:    35     18      42      27     31\n```\n\nLos valores anteriores son únicamente un ejemplo.\n\n## El programa deberá mostrar\n\n- Todos los jugadores con sus respectivos puntajes.\n- El puntaje total conseguido entre todos.\n- Cuántos jugadores consiguieron **20 puntos o más**.\n- El puntaje más alto.\n- El puntaje más bajo.\n\nAdemás, deberán crear una función:\n\n```python\ncalcular_total(...)\n```\n\nLa función deberá recibir la lista de puntajes y **devolver el total de puntos obtenidos**.\n\nLos resultados deberán mostrarse utilizando **f-strings**.\n\n---\n\n## 💡 Pista\n\nLas dos listas tienen algo muy importante en común: **la posición**.\n\nSi:\n\n```python\nnombres[0]\n```\n\ncorresponde al primer jugador, entonces:\n\n```python\npuntajes[0]\n```\n\ncorresponde al puntaje de ese mismo jugador.\n\nPregúntense:\n\n> ¿Cómo puedo recorrer las posiciones desde `0` hasta la cantidad de jugadores?\n\nPara calcular el total recuerden este patrón:\n\n```text\nComenzar en 0\n      ↓\nRecorrer los puntajes\n      ↓\nIr acumulando cada valor\n```\n\nPara encontrar el mayor y el menor tampoco es obligatorio ordenar la lista.\n\nPueden preguntarse:\n\n> Si inicialmente considero que el primer puntaje es el mayor, ¿qué debería hacer cada vez que encuentre uno superior?",
+          "points": 35,
+          "bonus": false,
+          "icon": "code",
+          "scores": {}
+        },
+        {
+          "id": "f6a64a9f-3a2d-46e7-a79d-a9ddfa59ea7a",
+          "title": "🥇 RETO 3 — Sistema de pedidos de una pizzería",
+          "description": "Este es el **Boss de la Semana 3**.\n\nUna pizzería vende únicamente los siguientes productos:\n\n```text\n1. Pizza personal  → $5.00\n2. Pizza mediana   → $8.00\n3. Pizza familiar  → $12.00\n```\n\nUn cliente puede realizar **varios pedidos** antes de terminar su compra.\n\nEl programa deberá mostrar repetidamente:\n\n```text\n====== PIZZERÍA PYTHON ======\n\n1. Agregar pizza\n2. Ver pedido\n3. Eliminar pizza\n4. Finalizar compra\n```\n\n---\n\n## 1. Agregar pizza\n\nEl usuario deberá seleccionar qué tipo de pizza desea agregar.\n\nCada pizza seleccionada deberá almacenarse utilizando **listas**.\n\nEl cliente podrá continuar agregando pizzas hasta decidir finalizar su compra.\n\n---\n\n## 2. Ver pedido\n\nMostrar las pizzas que actualmente forman parte del pedido.\n\nPor ejemplo:\n\n```text\n=== PEDIDO ACTUAL ===\n\n1. Pizza mediana\n2. Pizza personal\n3. Pizza familiar\n```\n\n---\n\n## 3. Eliminar pizza\n\nPermitir que el cliente retire una pizza agregada anteriormente.\n\nEl programa deberá asegurarse de actualizar correctamente la información del pedido.\n\n---\n\n## 4. Finalizar compra\n\nAl finalizar deberá mostrarse una factura similar a:\n\n```text\n========== FACTURA ==========\n\n1. Pizza mediana      $8.00\n2. Pizza personal     $5.00\n3. Pizza mediana      $8.00\n\nCantidad de pizzas: 3\nSubtotal: $21.00\nDescuento: $0.00\nTOTAL: $21.00\n```\n\nEl formato puede ser diferente siempre que muestre correctamente la información solicitada.\n\n---\n\n## Descuentos\n\nSe aplicarán las siguientes reglas:\n\n| Subtotal | Descuento |\n|---|---:|\n| Menos de $25 | Sin descuento |\n| Desde $25 hasta $49.99 | 10 % |\n| $50 o más | 15 % |\n\nEl cálculo del total deberá realizarse mediante **una función**.\n\n---\n\n## 💡 Pista 1 — Divide el problema\n\nNo comiencen intentando construir directamente la factura.\n\nDividan el problema:\n\n```text\nMostrar menú\n     ↓\nAgregar pizzas\n     ↓\nMostrar pedido\n     ↓\nEliminar pizzas\n     ↓\nCalcular subtotal\n     ↓\nAplicar descuento\n     ↓\nMostrar factura\n```\n\nConsigan que cada etapa funcione antes de continuar con la siguiente.\n\n---\n\n## 💡 Pista 2 — El precio ya es conocido\n\nSi el usuario selecciona:\n\n```text\n1\n```\n\nustedes ya saben qué pizza seleccionó y cuánto cuesta.\n\nPregúntense:\n\n> ¿Cómo puedo transformar una opción ingresada por el usuario en un producto y un precio?\n\nRecuerden las estructuras de decisión estudiadas anteriormente.\n\n---\n\n## 💡 Pista 3 — Listas relacionadas\n\nUna posibilidad es trabajar con información relacionada:\n\n```text\nproductos\nprecios\n```\n\nSi agregan una pizza, ambas estructuras deberán mantenerse relacionadas.\n\nAhora piensen:\n\n> Si elimino una pizza, ¿qué debería ocurrir con su precio?\n\nLa **posición de los elementos** puede ayudarlos.\n\n---\n\n## 💡 Pista 4 — Reutilicen código\n\nNo es necesario colocar toda la lógica dentro del menú principal.\n\nPregúntense:\n\n> ¿Qué partes del programa realizan una tarea específica y podrían convertirse en una función?\n\nPor ejemplo, podrían separar responsabilidades como:\n\n- Mostrar el pedido.\n- Calcular el subtotal.\n- Calcular el descuento.\n- Mostrar la factura.\n\nUstedes deberán decidir cómo organizarlo.\n\n---",
+          "points": 55,
+          "bonus": false,
+          "icon": "code",
+          "scores": {}
+        },
+        {
+          "id": "38f168ba-9a6c-4c6d-b0be-cdc9abec1852",
+          "title": "⭐ BONUS — Mochila ordenada",
+          "description": "Agregar una nueva opción a la mochila del aventurero:\n\n```text\n6. Ordenar mochila\n```\n\nEsta opción deberá permitir mostrar los objetos de la mochila **ordenados alfabéticamente**.",
+          "points": 5,
+          "bonus": true,
+          "icon": "code",
+          "scores": {}
+        },
+        {
+          "id": "8963d88a-f10e-4a6a-8dcf-0acfef313e52",
+          "title": "⭐ BONUS — Podio",
+          "description": "El programa deberá determinar y mostrar correctamente los **tres puntajes más altos del torneo**:\n\n```text\n🥇 Primer lugar\n🥈 Segundo lugar\n🥉 Tercer lugar\n```",
+          "points": 10,
+          "bonus": true,
+          "icon": "code",
+          "scores": {}
+        },
+        {
+          "id": "e6a72b8b-c9ed-4686-86c3-7ac05d795c92",
+          "title": "🔥 BONUS — Programa modular",
+          "description": "Cuando el programa principal funcione correctamente, separen el proyecto en al menos **dos archivos `.py`**.\n\nPor ejemplo:\n\n```text\npizzeria.py\nmain.py\n```\n\nUno de los archivos deberá contener funciones reutilizables y el otro deberá controlar la ejecución principal.\n\nLos archivos deberán comunicarse utilizando:\n\n```python\nimport\n```",
+          "points": 10,
+          "bonus": true,
+          "icon": "code",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Próximos retos",
+      "status": "upcoming",
+      "activities": []
+    },
+    {
+      "number": 5,
+      "title": "Próximos retos",
+      "status": "upcoming",
+      "activities": []
+    },
+    {
+      "number": 6,
+      "title": "Próximos retos",
+      "status": "upcoming",
+      "activities": []
+    },
+    {
+      "number": 7,
+      "title": "Próximos retos",
+      "status": "upcoming",
+      "activities": []
+    },
+    {
+      "number": 8,
+      "title": "Próximos retos",
+      "status": "upcoming",
+      "activities": []
+    }
   ]
 }
