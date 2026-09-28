@@ -241,6 +241,33 @@
           "bonus": true,
           "icon": "code",
           "scores": {}
+        },
+        {
+          "id": "b43dfa8d-9779-4e7d-a6d4-81fb7d94a22e",
+          "title": "📝 RETO EXTRA — Analizador de palabras",
+          "description": "## 15 puntos\nPide al usuario una frase y crea un programa que analice sus palabras. Debe mostrar cantidad total de palabras, palabra más larga, coincidencias de una palabra buscada y una lista sin repetidos que conserve el orden.\n\nUsa `split()`, una lista auxiliar, comparaciones de cadenas y f-strings. Convierte la frase a minúsculas para que `Python` y `python` se consideren iguales.",
+          "points": 15,
+          "bonus": false,
+          "icon": "search",
+          "scores": {}
+        },
+        {
+          "id": "da38d68e-6034-4bf8-b718-896343d8a25d",
+          "title": "🎬 RETO EXTRA — Reservas de cine",
+          "description": "## 30 puntos\nRepresenta una sala con una lista de tuplas `(fila, asiento, estado)`. Crea al menos 20 asientos y un menú para ver, buscar, reservar, cancelar y contar lugares libres.\n\nNo permitas reservar dos veces el mismo asiento ni cancelar uno libre. Muestra columnas alineadas. Como las tuplas no se modifican, al cambiar un estado deberás crear una nueva lista actualizada.",
+          "points": 30,
+          "bonus": false,
+          "icon": "blocks",
+          "scores": {}
+        },
+        {
+          "id": "92f8d49f-4e30-4066-895d-d16741e55dce",
+          "title": "🏆 RETO EXTRA — Liga relámpago",
+          "description": "## 45 puntos · Desafío avanzado\nCrea un gestor para una liga de 6 equipos. Cada equipo será una tupla: `(nombre, ganados, empatados, perdidos, goles_favor, goles_contra)`.\n\nEl menú debe registrar partidos, buscar equipos, mostrar la tabla y finalizar. Cada resultado actualiza ambos equipos. La tabla debe indicar partidos, puntos (`3` por victoria y `1` por empate), diferencia de gol y posición. En empate de puntos, gana quien tenga mayor diferencia de gol.\n\nOrdena manualmente con comparaciones, sin funciones de ordenamiento avanzadas. Divide el reto en localizar equipos, actualizar estadísticas, calcular puntos y comparar posiciones.",
+          "points": 45,
+          "bonus": false,
+          "icon": "crown",
+          "scores": {}
         }
       ]
     },
