@@ -245,7 +245,7 @@
         {
           "id": "b43dfa8d-9779-4e7d-a6d4-81fb7d94a22e",
           "title": "📝 RETO EXTRA — Analizador de palabras",
-          "description": "## 15 puntos\nPide al usuario una frase y crea un programa que analice sus palabras. Debe mostrar cantidad total de palabras, palabra más larga, coincidencias de una palabra buscada y una lista sin repetidos que conserve el orden.\n\nUsa `split()`, una lista auxiliar, comparaciones de cadenas y f-strings. Convierte la frase a minúsculas para que `Python` y `python` se consideren iguales.",
+          "description": "## 15 puntos\nPide al usuario una frase y crea un programa que analice sus palabras. Debe mostrar cantidad total de palabras, palabra más larga, coincidencias de una palabra buscada y una lista sin repetidos que conserve el orden.\n\n```text\nEscribe una frase: Python es genial y Python es práctico\nPalabra a buscar: python\n\nTotal de palabras: 7\nPalabra más larga: práctico\nLa palabra 'python' aparece: 2 veces\nSin repetir: python, es, genial, y, práctico\n```\n\n## Pista\nUsa `split()` para convertir la frase en una lista. Recorre esa lista para contar y conserva otra lista vacía donde solo agregues las palabras que aún no aparecieron. Convierte todo a minúsculas para que `Python` y `python` se consideren iguales.",
           "points": 15,
           "bonus": false,
           "icon": "search",
@@ -254,7 +254,7 @@
         {
           "id": "da38d68e-6034-4bf8-b718-896343d8a25d",
           "title": "🎬 RETO EXTRA — Reservas de cine",
-          "description": "## 30 puntos\nRepresenta una sala con una lista de tuplas `(fila, asiento, estado)`. Crea al menos 20 asientos y un menú para ver, buscar, reservar, cancelar y contar lugares libres.\n\nNo permitas reservar dos veces el mismo asiento ni cancelar uno libre. Muestra columnas alineadas. Como las tuplas no se modifican, al cambiar un estado deberás crear una nueva lista actualizada.",
+          "description": "## 30 puntos\nRepresenta una sala con una lista de tuplas `(fila, asiento, estado)`. Crea al menos 20 asientos y un menú para ver, buscar, reservar, cancelar y contar lugares libres.\n\n```text\n=== RESERVAS DE CINE ===\n1. Ver sala\n2. Buscar asiento\n3. Reservar\n4. Cancelar\n5. Salir\n\nFila: A\nAsiento: 3\nReserva realizada: A3\nAsientos libres: 17\n```\n\nNo permitas reservar dos veces el mismo asiento ni cancelar uno libre. Muestra columnas alineadas.\n\n## Pista\nPrimero localiza el asiento recorriendo la lista y comparando fila y número. Como las tuplas no se modifican, al cambiar un estado crea una nueva lista: copia las tuplas sin cambios y reemplaza solamente la tupla del asiento encontrado.",
           "points": 30,
           "bonus": false,
           "icon": "blocks",
@@ -263,7 +263,7 @@
         {
           "id": "92f8d49f-4e30-4066-895d-d16741e55dce",
           "title": "🏆 RETO EXTRA — Liga relámpago",
-          "description": "## 45 puntos · Desafío avanzado\nCrea un gestor para una liga de 6 equipos. Cada equipo será una tupla: `(nombre, ganados, empatados, perdidos, goles_favor, goles_contra)`.\n\nEl menú debe registrar partidos, buscar equipos, mostrar la tabla y finalizar. Cada resultado actualiza ambos equipos. La tabla debe indicar partidos, puntos (`3` por victoria y `1` por empate), diferencia de gol y posición. En empate de puntos, gana quien tenga mayor diferencia de gol.\n\nOrdena manualmente con comparaciones, sin funciones de ordenamiento avanzadas. Divide el reto en localizar equipos, actualizar estadísticas, calcular puntos y comparar posiciones.",
+          "description": "## 45 puntos · Desafío avanzado\nCrea un gestor para una liga de 6 equipos. Cada equipo será una tupla: `(nombre, ganados, empatados, perdidos, goles_favor, goles_contra)`.\n\nEl menú debe registrar partidos, buscar equipos, mostrar la tabla y finalizar. Cada resultado actualiza ambos equipos. La tabla debe indicar partidos, puntos (`3` por victoria y `1` por empate), diferencia de gol y posición. En empate de puntos, gana quien tenga mayor diferencia de gol.\n\n```text\n=== LIGA RELÁMPAGO ===\nLocal: Code Warriors\nGoles local: 3\nVisitante: Los Booleanos\nGoles visitante: 1\nPartido registrado.\n\nPos  Equipo           PJ  Pts  DG\n1    Code Warriors     1    3   +2\n2    Los Booleanos     1    0   -2\n```\n\n## Pista\nDivide el reto en cuatro partes: localizar los dos equipos, actualizar sus estadísticas, calcular puntos y comparar posiciones. Empieza mostrando la tabla sin ordenar; después compara equipos vecinos e intercámbialos si el segundo tiene más puntos o, en empate, mejor diferencia de gol.",
           "points": 45,
           "bonus": false,
           "icon": "crown",
