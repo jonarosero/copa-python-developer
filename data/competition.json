@@ -31,40 +31,7 @@
         { "id": "repetible", "title": "Batalla repetible", "description": "## Bonus · 10 puntos\nCuando el combate básico funcione, permite realizar ataques sin volver a ejecutar el archivo. El usuario debe elegir:\n\n1. Realizar otro ataque\n2. Terminar batalla\n\nEl programa continúa hasta elegir terminar o hasta que el defensor se quede sin vida.", "points": 10, "bonus": true, "icon": "flame", "scores": {} }
       ]
     },
-    {
-      "number": 3,
-      "title": "Listas, tuplas y búsquedas",
-      "status": "upcoming",
-      "activities": [
-        {
-          "id": "agenda-estudio",
-          "title": "Agenda de estudio",
-          "description": "## Reto 1 · 10 puntos\nCrea una lista con al menos 6 temas que quieras estudiar en Python. El programa debe pedir al usuario un tema y buscarlo en la lista.\n\n- Si el tema existe, muestra su posición usando un mensaje formateado.\n- Si no existe, indica que todavía no está planificado.\n- Muestra la agenda numerada al inicio y al final.\n\n```text\n¿Qué tema buscas?: listas\nListas está en la posición 3 de tu agenda.\n```\n\n💡 Convierte la búsqueda a minúsculas para que `Listas` y `listas` funcionen igual.",
-          "points": 10,
-          "bonus": false,
-          "icon": "search",
-          "scores": {}
-        },
-        {
-          "id": "catalogo-pokemon",
-          "title": "Catálogo de Pokémon",
-          "description": "## Reto 2 · 25 puntos\nConstruye un catálogo usando una lista de tuplas. Cada tupla debe tener: `(nombre, tipo, nivel)`. Registra al menos 5 Pokémon.\n\nEl programa debe mostrar un menú para:\n\n1. Ver todo el catálogo.\n2. Buscar un Pokémon por nombre.\n3. Mostrar solo los Pokémon de un tipo indicado.\n4. Mostrar el Pokémon con mayor nivel.\n\nUsa cadenas formateadas para alinear los resultados y no modifiques las tuplas al consultar.\n\n💡 Recorre la lista una vez por cada consulta y usa una variable para recordar el mejor nivel encontrado.",
-          "points": 25,
-          "bonus": false,
-          "icon": "blocks",
-          "scores": {}
-        },
-        {
-          "id": "mercado-interactivo",
-          "title": "Mercado interactivo",
-          "description": "## Reto 3 · 50 puntos · Reto experto\nCrea un sistema de mercado en consola. El inventario debe ser una lista de tuplas con `(producto, precio, cantidad_disponible)`. Comienza con al menos 8 productos.\n\nEl usuario debe poder repetir este menú hasta elegir salir:\n\n1. Ver inventario con columnas alineadas.\n2. Buscar un producto por nombre.\n3. Agregar un producto al carrito indicando cantidad.\n4. Ver el carrito y su total.\n5. Finalizar compra.\n\nCada elemento del carrito debe guardar producto, precio y cantidad. Al finalizar, muestra subtotal, descuento y total con formato de dos decimales. Aplica 10% de descuento si el subtotal es mayor o igual a 50. No permitas comprar más unidades de las disponibles.\n\n## Por qué vale 50 puntos\nEste reto integra todos los contenidos de la semana: variables, formateo de cadenas, listas, tuplas, búsquedas y decisiones. Resolverlo completo vale más que los dos retos anteriores juntos.\n\n💡 Divide el problema: primero inventario, después búsqueda, luego carrito y al final el cálculo de compra. Prueba cada parte antes de unirlas.",
-          "points": 50,
-          "bonus": false,
-          "icon": "crown",
-          "scores": {}
-        }
-      ]
-    },
+    { "number": 3, "title": "Próximos retos", "status": "upcoming", "activities": [] },
     { "number": 4, "title": "Próximos retos", "status": "upcoming", "activities": [] },
     { "number": 5, "title": "Próximos retos", "status": "upcoming", "activities": [] },
     { "number": 6, "title": "Próximos retos", "status": "upcoming", "activities": [] },
