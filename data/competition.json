@@ -273,9 +273,28 @@
     },
     {
       "number": 4,
-      "title": "Próximos retos",
+      "title": "Diccionarios y persistencia de datos",
       "status": "upcoming",
-      "activities": []
+      "activities": [
+        {
+          "id": "trivia-json",
+          "title": "Reto 5 — Trivia con historial JSON",
+          "description": "## 80 puntos · Máximo 30 minutos\n\nCrea una trivia que cargue siempre las cinco preguntas de `trivia.json`. Cada respuesta correcta vale **16 puntos**. Al finalizar, guarda el resultado del jugador en `historial_jugadores.json`.\n\n## Archivo inicial: `trivia.json`\nCopia este contenido para empezar:\n\n```json\n[\n  {\n    \"id\": 1,\n    \"pregunta\": \"¿Qué estructura de datos guarda información usando claves y valores?\",\n    \"opciones\": [\"1. Lista\", \"2. Diccionario\", \"3. Tupla\", \"4. Cadena\"],\n    \"respuesta_correcta\": \"2\"\n  },\n  {\n    \"id\": 2,\n    \"pregunta\": \"¿Qué método permite recorrer simultáneamente las claves y valores de un diccionario?\",\n    \"opciones\": [\"1. keys()\", \"2. values()\", \"3. items()\", \"4. update()\"],\n    \"respuesta_correcta\": \"3\"\n  },\n  {\n    \"id\": 3,\n    \"pregunta\": \"¿Qué error aparece al intentar convertir la palabra hola a número con float()?\",\n    \"opciones\": [\"1. KeyError\", \"2. ValueError\", \"3. FileNotFoundError\", \"4. TypeError\"],\n    \"respuesta_correcta\": \"2\"\n  },\n  {\n    \"id\": 4,\n    \"pregunta\": \"¿Qué formato permite guardar listas y diccionarios manteniendo su estructura?\",\n    \"opciones\": [\"1. TXT\", \"2. CSV\", \"3. JSON\", \"4. PY\"],\n    \"respuesta_correcta\": \"3\"\n  },\n  {\n    \"id\": 5,\n    \"pregunta\": \"¿Qué módulo se utiliza para leer un CSV como filas con nombres de columna?\",\n    \"opciones\": [\"1. json\", \"2. csv\", \"3. os\", \"4. math\"],\n    \"respuesta_correcta\": \"2\"\n  }\n]\n```\n\n## Requisitos\n1. Pedir el nombre del jugador.\n2. Mostrar las cinco preguntas completas, una por una.\n3. Guardar `buena` o `mala` para cada respuesta.\n4. Sumar 16 puntos por respuesta correcta.\n5. Crear o cargar el historial y guardar el resultado final.\n\n```text\n=== RESULTADO FINAL ===\nJugador: Ana\nPregunta 1: buena\nPregunta 2: mala\nPregunta 3: buena\nPregunta 4: buena\nPregunta 5: buena\n\nTotal: 64 puntos de 80\n```\n\n## Estructura de cada resultado\n```json\n{\n  \"nombre\": \"Ana\",\n  \"pregunta_1\": \"buena\",\n  \"pregunta_2\": \"mala\",\n  \"pregunta_3\": \"buena\",\n  \"pregunta_4\": \"buena\",\n  \"pregunta_5\": \"buena\",\n  \"total_puntos\": 64\n}\n```\n\n💡 **Pista:** carga las preguntas con `json.load()`. Crea un diccionario `resultado` y recorre las preguntas con un `for`. Solo necesitas guardar nombre, cinco resultados y el total de puntos.",
+          "points": 80,
+          "bonus": false,
+          "icon": "code",
+          "scores": {}
+        },
+        {
+          "id": "trivia-sobrescribir-historial",
+          "title": "Bonus — Actualizar sesión anterior",
+          "description": "## 20 puntos\nAntes de guardar la nueva sesión, revisa si el mismo jugador ya aparece en `historial_jugadores.json`. Si existe, debes reemplazar su resultado anterior en lugar de agregar un duplicado.\n\n```text\nYa existe una partida de Ana.\nSe actualizará con el puntaje de esta nueva sesión.\n```\n\n💡 **Pista:** inicia con `encontrado = False`. Recorre el historial; si `jugador[\"nombre\"] == nombre`, reemplaza ese elemento y marca la variable como verdadera. Si al terminar no fue encontrado, usa `append()` para agregar el nuevo resultado.",
+          "points": 20,
+          "bonus": true,
+          "icon": "star",
+          "scores": {}
+        }
+      ]
     },
     {
       "number": 5,
