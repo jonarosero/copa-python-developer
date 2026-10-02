@@ -277,6 +277,42 @@
       "status": "upcoming",
       "activities": [
         {
+          "id": "gestor-equipos-diccionarios",
+          "title": "Reto 1 — Gestor de equipos con diccionarios",
+          "description": "## 25 puntos\nAl iniciar pregunta cuántos equipos se van a ingresar. Por cada equipo solicita nombre, cantidad de integrantes, el nombre de cada integrante, curso y puntaje obtenido. Guarda cada equipo como un diccionario dentro de una lista.\n\nDespués muestra este menú:\n\n```text\n1. Consultar equipos\n2. Consultar un equipo por nombre\n3. Actualizar puntaje de un equipo\n4. Agregar integrante\n5. Salir\n```\n\n```text\n=== EQUIPOS REGISTRADOS ===\nEquipo: Code Warriors\nCurso: Python Intermedio\nIntegrantes: Ana, Luis, María\nPuntaje: 25\n```\n\n💡 **Pista:** cada equipo puede tener las claves `nombre`, `integrantes`, `curso` y `puntaje`. Usa una lista para todos los equipos, `items()` para consultar y una búsqueda por nombre antes de actualizar.",
+          "points": 25,
+          "bonus": false,
+          "icon": "code",
+          "scores": {}
+        },
+        {
+          "id": "bitacora-exploracion-txt",
+          "title": "Reto 2 — Bitácora de exploración TXT",
+          "description": "## 40 puntos\nCrea `bitacora.txt`. Cada exploración debe guardarse así: `nombre_explorador,zona,recursos_encontrados,minutos`.\n\nEl menú debe permitir registrar exploración, ver la bitácora completa, buscar por zona y mostrar el explorador que acumuló más minutos.\n\n```text\n=== EXPLORACIONES EN BOSQUE ===\nAna encontró: madera, hierbas\nTiempo: 35 minutos\n\nExplorador con más tiempo: Luis - 80 minutos\n```\n\n💡 **Pista:** al leer usa `strip().split(\",\")`. Acumula los minutos en un diccionario cuya clave sea el nombre del explorador.",
+          "points": 40,
+          "bonus": false,
+          "icon": "route",
+          "scores": {}
+        },
+        {
+          "id": "inventario-csv-total",
+          "title": "Reto 3 — Inventario CSV con valor total",
+          "description": "## 55 puntos\nCrea o lee `inventario.csv` con las columnas `codigo,nombre,cantidad,precio`. Debe permitir agregar productos, listar inventario, buscar por código y calcular su valor total.\n\n```text\n=== VALOR DEL INVENTARIO ===\nTeclado: 9 unidades x $10.00 = $90.00\nMouse: 5 unidades x $8.00 = $40.00\n\nValor total: $130.00\n```\n\n💡 **Pista:** lee con `csv.DictReader`. Para cada fila convierte cantidad a entero y precio a `float`; después calcula `cantidad * precio` y acumula el total. Si el CSV no existe, créalo con `csv.DictWriter` y cabeceras.",
+          "points": 55,
+          "bonus": false,
+          "icon": "calculator",
+          "scores": {}
+        },
+        {
+          "id": "aventura-guardable-json",
+          "title": "Reto 4 — Aventura guardable JSON",
+          "description": "## 70 puntos\nCrea una partida de aventura que se guarde en `aventura.json`. El jugador tiene nombre, energía, monedas, mochila y zonas visitadas. El menú permite explorar, recoger recursos, comprar energía, consultar estado y guardar/salir.\n\n```text\n=== ESTADO DEL AVENTURERO ===\nNombre: Ana\nEnergía: 75\nMonedas: 12\nMochila: mapa, antorcha\nZonas visitadas: bosque, cueva\n```\n\nEstructura inicial:\n\n```json\n{\n  \"nombre\": \"Ana\",\n  \"energia\": 75,\n  \"monedas\": 12,\n  \"mochila\": [\"mapa\"],\n  \"zonas_visitadas\": [\"bosque\"]\n}\n```\n\n💡 **Pista:** si el archivo no existe, crea el diccionario inicial. Usa `json.load()` al comenzar y `json.dump(..., indent=4, ensure_ascii=False)` cada vez que guardes cambios.",
+          "points": 70,
+          "bonus": false,
+          "icon": "coins",
+          "scores": {}
+        },
+        {
           "id": "trivia-json",
           "title": "Reto 5 — Trivia con historial JSON",
           "description": "## 80 puntos · Máximo 30 minutos\n\nCrea una trivia que cargue siempre las cinco preguntas de `trivia.json`. Cada respuesta correcta vale **16 puntos**. Al finalizar, guarda el resultado del jugador en `historial_jugadores.json`.\n\n## Archivo inicial: `trivia.json`\nCopia este contenido para empezar:\n\n```json\n[\n  {\n    \"id\": 1,\n    \"pregunta\": \"¿Qué estructura de datos guarda información usando claves y valores?\",\n    \"opciones\": [\"1. Lista\", \"2. Diccionario\", \"3. Tupla\", \"4. Cadena\"],\n    \"respuesta_correcta\": \"2\"\n  },\n  {\n    \"id\": 2,\n    \"pregunta\": \"¿Qué método permite recorrer simultáneamente las claves y valores de un diccionario?\",\n    \"opciones\": [\"1. keys()\", \"2. values()\", \"3. items()\", \"4. update()\"],\n    \"respuesta_correcta\": \"3\"\n  },\n  {\n    \"id\": 3,\n    \"pregunta\": \"¿Qué error aparece al intentar convertir la palabra hola a número con float()?\",\n    \"opciones\": [\"1. KeyError\", \"2. ValueError\", \"3. FileNotFoundError\", \"4. TypeError\"],\n    \"respuesta_correcta\": \"2\"\n  },\n  {\n    \"id\": 4,\n    \"pregunta\": \"¿Qué formato permite guardar listas y diccionarios manteniendo su estructura?\",\n    \"opciones\": [\"1. TXT\", \"2. CSV\", \"3. JSON\", \"4. PY\"],\n    \"respuesta_correcta\": \"3\"\n  },\n  {\n    \"id\": 5,\n    \"pregunta\": \"¿Qué módulo se utiliza para leer un CSV como filas con nombres de columna?\",\n    \"opciones\": [\"1. json\", \"2. csv\", \"3. os\", \"4. math\"],\n    \"respuesta_correcta\": \"2\"\n  }\n]\n```\n\n## Requisitos\n1. Pedir el nombre del jugador.\n2. Mostrar las cinco preguntas completas, una por una.\n3. Guardar `buena` o `mala` para cada respuesta.\n4. Sumar 16 puntos por respuesta correcta.\n5. Crear o cargar el historial y guardar el resultado final.\n\n```text\n=== RESULTADO FINAL ===\nJugador: Ana\nPregunta 1: buena\nPregunta 2: mala\nPregunta 3: buena\nPregunta 4: buena\nPregunta 5: buena\n\nTotal: 64 puntos de 80\n```\n\n## Estructura de cada resultado\n```json\n{\n  \"nombre\": \"Ana\",\n  \"pregunta_1\": \"buena\",\n  \"pregunta_2\": \"mala\",\n  \"pregunta_3\": \"buena\",\n  \"pregunta_4\": \"buena\",\n  \"pregunta_5\": \"buena\",\n  \"total_puntos\": 64\n}\n```\n\n💡 **Pista:** carga las preguntas con `json.load()`. Crea un diccionario `resultado` y recorre las preguntas con un `for`. Solo necesitas guardar nombre, cinco resultados y el total de puntos.",
@@ -290,6 +326,15 @@
           "title": "Bonus — Actualizar sesión anterior",
           "description": "## 20 puntos\nAntes de guardar la nueva sesión, revisa si el mismo jugador ya aparece en `historial_jugadores.json`. Si existe, debes reemplazar su resultado anterior en lugar de agregar un duplicado.\n\n```text\nYa existe una partida de Ana.\nSe actualizará con el puntaje de esta nueva sesión.\n```\n\n💡 **Pista:** inicia con `encontrado = False`. Recorre el historial; si `jugador[\"nombre\"] == nombre`, reemplaza ese elemento y marca la variable como verdadera. Si al terminar no fue encontrado, usa `append()` para agregar el nuevo resultado.",
           "points": 20,
+          "bonus": true,
+          "icon": "star",
+          "scores": {}
+        },
+        {
+          "id": "recuperacion-segura-archivos",
+          "title": "Bonus — Recuperación segura de archivos",
+          "description": "## 10 puntos\nProtege los archivos de los retos. Si `bitacora.txt`, `inventario.csv`, `aventura.json` o `historial_jugadores.json` no existen, el programa no debe fallar: debe crear la estructura inicial correcta.\n\n💡 **Pista:** usa `try/except FileNotFoundError`. TXT inicia vacío, CSV necesita cabeceras y JSON puede iniciar como `{}` o `[]`.",
+          "points": 10,
           "bonus": true,
           "icon": "star",
           "scores": {}
