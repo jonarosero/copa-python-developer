@@ -249,7 +249,7 @@
           "scores": {
             "canela": 10,
             "booleanos": 10,
-            "dinamita": 0,
+            "dinamita": 10,
             "otro": 0
           }
         },
