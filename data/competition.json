@@ -302,7 +302,12 @@
           "points": 45,
           "bonus": false,
           "icon": "crown",
-          "scores": {}
+          "scores": {
+            "canela": 0,
+            "booleanos": 0,
+            "dinamita": 45,
+            "otro": 0
+          }
         }
       ]
     },
