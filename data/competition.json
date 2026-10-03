@@ -186,7 +186,7 @@
       "number": 3,
       "title": "Semana 3: Python Intermedio",
       "closesAt": "2026-10-03T14:10:00.000Z",
-      "status": "active",
+      "status": "closed",
       "activities": [
         {
           "id": "348d527d-123a-46b2-990e-957d49e45d51",
@@ -315,7 +315,7 @@
       "number": 4,
       "title": "Diccionarios y persistencia de datos",
       "closesAt": "2026-10-03T18:00:00.000Z",
-      "status": "upcoming",
+      "status": "active",
       "activities": [
         {
           "id": "gestor-equipos-diccionarios",
