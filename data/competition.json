@@ -279,7 +279,12 @@
           "points": 15,
           "bonus": false,
           "icon": "search",
-          "scores": {}
+          "scores": {
+            "canela": 0,
+            "booleanos": 0,
+            "dinamita": 15,
+            "otro": 0
+          }
         },
         {
           "id": "da38d68e-6034-4bf8-b718-896343d8a25d",
