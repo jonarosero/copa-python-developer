@@ -223,7 +223,12 @@
           "points": 55,
           "bonus": false,
           "icon": "code",
-          "scores": {}
+          "scores": {
+            "canela": 0,
+            "booleanos": 55,
+            "dinamita": 55,
+            "otro": 55
+          }
         },
         {
           "id": "38f168ba-9a6c-4c6d-b0be-cdc9abec1852",
