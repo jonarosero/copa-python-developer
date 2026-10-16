@@ -384,9 +384,73 @@
     },
     {
       "number": 5,
-      "title": "Próximos retos",
+      "title": "Programación orientada a objetos",
       "status": "upcoming",
-      "activities": []
+      "activities": [
+        {
+          "id": "poo-ficha-personaje",
+          "title": "Reto 1 — Ficha de personaje",
+          "description": "## 30 puntos\nCrea una clase `Personaje` con los atributos `nombre`, `vida`, `nivel` y `clase_personaje`. Crea al menos dos objetos y usa un método `mostrar_info()` para presentar sus datos.\n\n```text\n=== PERSONAJES ===\nNombre: Aria\nClase: Maga\nNivel: 3\nVida: 80\n```\n\n💡 **Pista:** empieza con `__init__` y asigna cada valor usando `self`. Luego crea un método que imprima los atributos del objeto. No necesitas menús todavía: primero logra crear y mostrar dos personajes.",
+          "points": 30,
+          "bonus": false,
+          "icon": "code",
+          "scores": {}
+        },
+        {
+          "id": "poo-cuenta-bancaria",
+          "title": "Reto 2 — Cuenta bancaria",
+          "description": "## 65 puntos\nCrea la clase `CuentaBancaria` con `titular`, `numero_cuenta` y `saldo`. Implementa los métodos `depositar()`, `retirar()`, `consultar_saldo()` y `mostrar_info()`.\n\nEl programa debe impedir retirar más dinero que el saldo disponible.\n\n```text\nTitular: Ana\nSaldo inicial: $100.00\n\nDepósito: $50.00\nNuevo saldo: $150.00\n\nRetiro: $200.00\nFondos insuficientes\n```\n\n💡 **Pista:** cada método trabaja sobre el mismo objeto. Antes de retirar compara el valor solicitado con `self.saldo`. Si el depósito o retiro no es positivo, muestra un mensaje y no cambies el saldo.",
+          "points": 65,
+          "bonus": false,
+          "icon": "coins",
+          "scores": {}
+        },
+        {
+          "id": "poo-inventario-videojuego",
+          "title": "Reto 3 — Inventario de videojuego",
+          "description": "## 90 puntos\nCrea dos clases: `Jugador` e `Inventario`. Un `Jugador` tiene nombre, nivel y un objeto `Inventario`. El inventario administra una lista de objetos mediante `agregar_objeto()`, `eliminar_objeto()`, `buscar_objeto()` y `mostrar_inventario()`.\n\n```text\n=== INVENTARIO DE LUIS ===\n1. Espada\n2. Poción\n3. Escudo\n\nBuscar: Poción\nEl objeto sí está en el inventario.\n```\n\n💡 **Pista:** desarrolla primero la clase `Inventario` y pruébala por separado. En `Jugador.__init__` crea el inventario con `self.inventario = Inventario()`. Para eliminar, verifica primero que el objeto esté en la lista.",
+          "points": 90,
+          "bonus": false,
+          "icon": "blocks",
+          "scores": {}
+        },
+        {
+          "id": "poo-biblioteca",
+          "title": "Reto 4 — Biblioteca de préstamos",
+          "description": "## 120 puntos\nCrea las clases `Libro` y `Biblioteca`. Cada libro guarda título, autor, código y estado. La biblioteca mantiene una lista de objetos `Libro`.\n\nImplementa este menú:\n\n```text\n1. Agregar libro\n2. Mostrar libros\n3. Buscar libro\n4. Prestar libro\n5. Devolver libro\n6. Salir\n```\n\n```text\n=== BIBLIOTECA ===\n1. El principito - Antoine de Saint-Exupéry - Disponible\n2. Python básico - Ana Torres - Prestado\n\nCódigo del libro: 2\nEl libro ya está prestado.\n```\n\n💡 **Pista:** `Biblioteca` debe tener `self.libros = []`. Busca por código recorriendo esa lista. El método para prestar o devolver debe vivir en `Libro`, porque modifica el estado de un solo libro.",
+          "points": 120,
+          "bonus": false,
+          "icon": "search",
+          "scores": {}
+        },
+        {
+          "id": "poo-torneo-equipos",
+          "title": "Reto 5 — Torneo de equipos",
+          "description": "## 150 puntos · Reto principal\nCrea las clases `Equipo` y `Torneo`. Un equipo guarda nombre, partidos ganados, empatados, perdidos y puntos. Implementa en `Equipo`: `registrar_victoria()`, `registrar_empate()`, `registrar_derrota()` y `mostrar_info()`.\n\n`Torneo` debe permitir agregar equipos, registrar resultados, mostrar la tabla, buscar equipo y mostrar líder. Victoria suma 3 puntos; empate suma 1; derrota suma 0.\n\n```text\n=== TABLA DEL TORNEO ===\nEquipo              PG  PE  PP  Puntos\nCode Warriors        2   0   1     6\nLos Booleanos        1   1   1     4\n\nLíder: Code Warriors\n```\n\n💡 **Pista:** primero prueba los métodos de un solo `Equipo`. Después crea `Torneo` con `self.equipos = []`. Para registrar un resultado, busca cada equipo por nombre y llama a su método correspondiente. No uses herencia: esta semana trabaja solamente con clases, objetos y métodos.",
+          "points": 150,
+          "bonus": false,
+          "icon": "crown",
+          "scores": {}
+        },
+        {
+          "id": "poo-contador-objetos",
+          "title": "Bonus — Contador de objetos",
+          "description": "## 20 puntos\nAgrega un atributo de clase llamado `personajes_creados`, `cuentas_creadas` o `equipos_creados` a uno de los retos. Debe aumentar cada vez que se cree un objeto y mostrarse desde un método de clase.\n\n```text\nEquipos creados: 4\n```\n\n💡 **Pista:** el atributo pertenece a la clase, no a cada objeto. Actualízalo con el nombre de la clase dentro de `__init__`.",
+          "points": 20,
+          "bonus": true,
+          "icon": "star",
+          "scores": {}
+        },
+        {
+          "id": "poo-encapsulamiento-validaciones",
+          "title": "Bonus — Encapsulamiento y validaciones",
+          "description": "## 25 puntos\nAplica encapsulamiento y validaciones al reto 2 o al reto 5. Impide nombres vacíos, saldos negativos, puntos negativos y equipos duplicados. Usa atributos protegidos como `self._saldo` y métodos que validen los datos antes de modificarlos.\n\n```text\nNombre inválido.\nEl saldo no puede ser negativo.\nEl equipo ya existe en el torneo.\n```\n\n💡 **Pista:** no modifiques los atributos directamente desde fuera de la clase. Centraliza las reglas dentro de sus métodos.",
+          "points": 25,
+          "bonus": true,
+          "icon": "star",
+          "scores": {}
+        }
+      ]
     },
     {
       "number": 6,
