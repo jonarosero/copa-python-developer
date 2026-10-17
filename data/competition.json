@@ -462,7 +462,12 @@
           "points": 120,
           "bonus": false,
           "icon": "search",
-          "scores": {}
+          "scores": {
+            "canela": 0,
+            "booleanos": 0,
+            "dinamita": 0,
+            "otro": 120
+          }
         },
         {
           "id": "poo-torneo-equipos",
