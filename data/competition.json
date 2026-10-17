@@ -339,7 +339,7 @@
           "bonus": false,
           "icon": "route",
           "scores": {
-            "canela": 0,
+            "canela": 20,
             "booleanos": 40,
             "dinamita": 0,
             "otro": 0
