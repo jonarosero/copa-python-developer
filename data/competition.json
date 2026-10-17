@@ -430,7 +430,12 @@
           "points": 30,
           "bonus": false,
           "icon": "code",
-          "scores": {}
+          "scores": {
+            "canela": 0,
+            "booleanos": 0,
+            "dinamita": 30,
+            "otro": 0
+          }
         },
         {
           "id": "poo-cuenta-bancaria",
