@@ -447,8 +447,8 @@
           "scores": {
             "canela": 0,
             "booleanos": 0,
-            "dinamita": 65,
-            "otro": 0
+            "dinamita": 0,
+            "otro": 65
           }
         },
         {
