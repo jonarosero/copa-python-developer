@@ -315,7 +315,7 @@
       "number": 4,
       "title": "Diccionarios y persistencia de datos",
       "closesAt": "2026-10-03T18:00:00.000Z",
-      "status": "upcoming",
+      "status": "active",
       "activities": [
         {
           "id": "gestor-equipos-diccionarios",
@@ -421,7 +421,7 @@
       "number": 5,
       "title": "Programación orientada a objetos",
       "closesAt": "2026-10-17T18:03:00.000Z",
-      "status": "active",
+      "status": "closed",
       "activities": [
         {
           "id": "poo-ficha-personaje",
