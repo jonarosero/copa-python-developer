@@ -444,7 +444,12 @@
           "points": 65,
           "bonus": false,
           "icon": "coins",
-          "scores": {}
+          "scores": {
+            "canela": 0,
+            "booleanos": 0,
+            "dinamita": 65,
+            "otro": 0
+          }
         },
         {
           "id": "poo-inventario-videojuego",
