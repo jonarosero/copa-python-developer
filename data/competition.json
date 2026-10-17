@@ -338,7 +338,12 @@
           "points": 40,
           "bonus": false,
           "icon": "route",
-          "scores": {}
+          "scores": {
+            "canela": 0,
+            "booleanos": 40,
+            "dinamita": 0,
+            "otro": 0
+          }
         },
         {
           "id": "inventario-csv-total",
