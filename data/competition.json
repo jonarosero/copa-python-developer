@@ -366,7 +366,12 @@
           "points": 70,
           "bonus": false,
           "icon": "coins",
-          "scores": {}
+          "scores": {
+            "canela": 0,
+            "booleanos": 70,
+            "dinamita": 0,
+            "otro": 0
+          }
         },
         {
           "id": "trivia-json",
