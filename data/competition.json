@@ -325,10 +325,10 @@
           "bonus": false,
           "icon": "code",
           "scores": {
-            "canela": 25,
+            "canela": 0,
             "booleanos": 25,
             "dinamita": 25,
-            "otro": 0
+            "otro": 25
           }
         },
         {
