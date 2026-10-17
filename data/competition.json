@@ -394,7 +394,12 @@
           "points": 20,
           "bonus": true,
           "icon": "star",
-          "scores": {}
+          "scores": {
+            "canela": 0,
+            "booleanos": 20,
+            "dinamita": 0,
+            "otro": 0
+          }
         },
         {
           "id": "recuperacion-segura-archivos",
