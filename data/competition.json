@@ -353,10 +353,10 @@
           "bonus": false,
           "icon": "calculator",
           "scores": {
-            "canela": 55,
+            "canela": 0,
             "booleanos": 55,
             "dinamita": 55,
-            "otro": 0
+            "otro": 55
           }
         },
         {
