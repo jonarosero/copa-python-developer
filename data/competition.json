@@ -432,7 +432,7 @@
           "icon": "code",
           "scores": {
             "canela": 0,
-            "booleanos": 0,
+            "booleanos": 30,
             "dinamita": 30,
             "otro": 0
           }
