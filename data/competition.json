@@ -380,7 +380,12 @@
           "points": 80,
           "bonus": false,
           "icon": "code",
-          "scores": {}
+          "scores": {
+            "canela": 0,
+            "booleanos": 80,
+            "dinamita": 0,
+            "otro": 0
+          }
         },
         {
           "id": "trivia-sobrescribir-historial",
