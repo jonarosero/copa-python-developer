@@ -352,7 +352,12 @@
           "points": 55,
           "bonus": false,
           "icon": "calculator",
-          "scores": {}
+          "scores": {
+            "canela": 0,
+            "booleanos": 55,
+            "dinamita": 0,
+            "otro": 0
+          }
         },
         {
           "id": "aventura-guardable-json",
