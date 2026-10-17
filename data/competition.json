@@ -315,7 +315,7 @@
       "number": 4,
       "title": "Diccionarios y persistencia de datos",
       "closesAt": "2026-10-03T18:00:00.000Z",
-      "status": "active",
+      "status": "closed",
       "activities": [
         {
           "id": "gestor-equipos-diccionarios",
@@ -506,7 +506,7 @@
     {
       "number": 6,
       "title": "Próximos retos",
-      "status": "upcoming",
+      "status": "active",
       "activities": []
     },
     {
