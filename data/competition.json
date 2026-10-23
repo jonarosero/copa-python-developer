@@ -552,6 +552,15 @@
           "bonus": true,
           "icon": "star",
           "scores": {}
+        },
+        {
+          "id": "ataques-especiales-juegos-hambre",
+          "title": "Bonus — Ataque especial",
+          "description": "## 25 puntos\nAgrega una habilidad especial para cada clase de **Los Juegos del Hambre**. Cada personaje solo puede usar su habilidad una vez por partida y usarla consume el turno actual.\n\n| Clase | Habilidad | Efecto |\n|---|---|---|\n| Guerrero | Protección | El siguiente daño recibido se reduce a la mitad. |\n| Mago | Curación | Recupera 25 puntos de vida sin superar su vida máxima. |\n| Arquero | Doble disparo | El siguiente ataque básico causa el doble de daño. |\n\n```text\nAna activa Protección.\nEl próximo daño recibido será reducido a la mitad.\n\nLuis activa Doble disparo.\nSu siguiente ataque básico causará 50 de daño.\n```\n\n💡 **Pista:** usa atributos booleanos para guardar los efectos temporales, por ejemplo `proteccion_activa`, `doble_disparo_activo` y `habilidad_usada`. Después de aplicar Protección o Doble disparo, vuelve el efecto a `False` para que funcione solo una vez.",
+          "points": 25,
+          "bonus": true,
+          "icon": "star",
+          "scores": {}
         }
       ]
     },
