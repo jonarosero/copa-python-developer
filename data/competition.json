@@ -537,7 +537,7 @@
         },
         {
           "id": "auto-electrico",
-          "title": "Bonus día 1 — Crear un vehículo eléctrico",
+          "title": "Bonus Reto 1 — Crear un vehículo eléctrico",
           "description": "## 10 puntos\nCrea `AutoElectrico` heredando de `Auto`. Debe incluir el atributo `bateria` y redefinir `moverse()` y `mostrar_detalle()`.\n\n```text\nTesla Model 3 avanza silenciosamente.\nBatería actual: 85%\n```\n\n💡 **Pista:** usa `super()` para reutilizar los atributos que `AutoElectrico` hereda de `Auto` y agrega solamente batería.",
           "points": 10,
           "bonus": true,
