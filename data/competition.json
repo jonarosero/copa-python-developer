@@ -546,7 +546,7 @@
         },
         {
           "id": "energia-tamagochi",
-          "title": "Bonus — Energía para Tamagochi",
+          "title": "Bonus Reto 2 — Energía para Tamagochi",
           "description": "## 15 puntos\nAgrega el atributo `energia` a las mascotas. Al comer, la mascota gana 15 puntos de energía; al jugar, pierde 30. La energía siempre debe mantenerse entre 0 y 100.\n\n```text\nRocky come croquetas.\nEnergía: 85/100\n\nRocky juega con la pelota.\nEnergía: 55/100\n```\n\n💡 **Pista:** antes de mostrar la energía, valida que no sea mayor que 100 ni menor que 0.",
           "points": 15,
           "bonus": true,
