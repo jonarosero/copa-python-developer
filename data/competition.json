@@ -505,9 +505,55 @@
     },
     {
       "number": 6,
-      "title": "Próximos retos",
+      "title": "Herencia y polimorfismo",
       "status": "active",
-      "activities": []
+      "activities": [
+        {
+          "id": "taller-juan-mecanico",
+          "title": "Reto 1 — Taller de Juan el Mecánico",
+          "description": "## 105 puntos\nCrea una clase base `Vehiculo` con marca, modelo y velocidad. Después crea las clases hijas `Auto` y `Moto`.\n\nCada clase debe redefinir los métodos `moverse()` y `mostrar_detalle()`. El detalle debe enseñar información propia de cada vehículo: cantidad de llantas, motor, cilindraje o batería, según corresponda.\n\n```text\nToyota Corolla avanza por la carretera.\n\n=== DETALLE ===\nMarca: Toyota\nModelo: Corolla\nLlantas: 4\nMotor: Gasolina\n```\n\n```text\nYamaha MT-03 avanza entre el tráfico.\n\n=== DETALLE ===\nMarca: Yamaha\nCilindraje: 321 cc\nLlantas: 2\n```\n\n💡 **Pista:** deja en `Vehiculo` los atributos que comparten todos. En cada clase hija redefine `mostrar_detalle()` para imprimir solamente los datos propios de ese tipo de vehículo.",
+          "points": 105,
+          "bonus": false,
+          "icon": "route",
+          "scores": {}
+        },
+        {
+          "id": "tamagochi-coding",
+          "title": "Reto 2 — Tamagochi - Coding",
+          "description": "## 195 puntos\nCrea una clase base `Mascota` con nombre y edad. Luego crea las clases hijas `Perro`, `Gato` y `Loro`.\n\nCada clase debe redefinir `hacer_sonido()` y `comer()`. Guarda varias mascotas en una lista y crea este menú:\n\n```text\n1. Registrar mascota\n2. Ver mascotas\n3. Escuchar sonidos\n4. Alimentar mascota\n5. Salir\n```\n\n```text\nRocky ladra: ¡Guau, guau!\nRocky come croquetas.\n\nMichi maúlla: ¡Miau!\nMichi come pescado.\n```\n\n💡 **Pista:** guarda los objetos en una lista. Al recorrerla puedes llamar a `hacer_sonido()` sin preguntar si el objeto es perro, gato o loro: cada clase ejecutará su propia versión del método.",
+          "points": 195,
+          "bonus": false,
+          "icon": "blocks",
+          "scores": {}
+        },
+        {
+          "id": "juegos-del-hambre",
+          "title": "Reto 3 — Los Juegos del Hambre",
+          "description": "## 300 puntos\nDos jugadores ingresan su nombre y eligen una clase: Guerrero, Mago o Arquero. Todas heredan de `Personaje` y redefinen `ataque_basico()`.\n\n| Clase | Vida | Daño básico |\n|---|---:|---:|\n| Guerrero | 140 | 15 |\n| Mago | 105 | 20 |\n| Arquero | 90 | 25 |\n\nEl combate es por turnos. En cada turno el jugador puede realizar ataque básico o consultar el estado. Gana quien deje la vida rival en 0 o menos.\n\n```text\n=== TURNO DE ANA ===\nAna — Guerrero — Vida: 140\nLuis — Arquero — Vida: 90\n\n1. Ataque básico\n2. Ver estado\n\nAna usa Golpe de espada.\nLuis recibe 15 puntos de daño.\nVida restante de Luis: 75\n```\n\n💡 **Pista:** para mantener el combate activo mientras ambos personajes sigan con vida, piensa en esta condición:\n\n```python\nwhile jugador_1.vida > 0 and jugador_2.vida > 0:\n```\n\nPuedes usar una variable para saber quién ataca:\n\n```python\nturno_jugador_1 = True\n```\n\nDespués de que un jugador termine su turno, cambia esa variable para que el otro pueda jugar.",
+          "points": 300,
+          "bonus": false,
+          "icon": "crown",
+          "scores": {}
+        },
+        {
+          "id": "auto-electrico",
+          "title": "Bonus — Vehículo eléctrico",
+          "description": "## 10 puntos\nCrea `AutoElectrico` heredando de `Auto`. Debe incluir el atributo `bateria` y redefinir `moverse()` y `mostrar_detalle()`.\n\n```text\nTesla Model 3 avanza silenciosamente.\nBatería actual: 85%\n```\n\n💡 **Pista:** usa `super()` para reutilizar los atributos que `AutoElectrico` hereda de `Auto` y agrega solamente batería.",
+          "points": 10,
+          "bonus": true,
+          "icon": "star",
+          "scores": {}
+        },
+        {
+          "id": "energia-tamagochi",
+          "title": "Bonus — Energía para Tamagochi",
+          "description": "## 15 puntos\nAgrega el atributo `energia` a las mascotas. Al comer, la mascota gana 15 puntos de energía; al jugar, pierde 30. La energía siempre debe mantenerse entre 0 y 100.\n\n```text\nRocky come croquetas.\nEnergía: 85/100\n\nRocky juega con la pelota.\nEnergía: 55/100\n```\n\n💡 **Pista:** antes de mostrar la energía, valida que no sea mayor que 100 ni menor que 0.",
+          "points": 15,
+          "bonus": true,
+          "icon": "star",
+          "scores": {}
+        }
+      ]
     },
     {
       "number": 7,
