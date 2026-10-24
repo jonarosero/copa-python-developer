@@ -576,7 +576,12 @@
           "points": 50,
           "bonus": true,
           "icon": "star",
-          "scores": {}
+          "scores": {
+            "canela": 0,
+            "booleanos": 0,
+            "dinamita": 0,
+            "otro": 50
+          }
         }
       ]
     },
