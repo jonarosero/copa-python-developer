@@ -530,7 +530,12 @@
           "points": 195,
           "bonus": false,
           "icon": "blocks",
-          "scores": {}
+          "scores": {
+            "canela": 0,
+            "booleanos": 0,
+            "dinamita": 195,
+            "otro": 0
+          }
         },
         {
           "id": "juegos-del-hambre",
