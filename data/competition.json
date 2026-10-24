@@ -539,7 +539,12 @@
           "points": 300,
           "bonus": false,
           "icon": "crown",
-          "scores": {}
+          "scores": {
+            "canela": 0,
+            "booleanos": 300,
+            "dinamita": 0,
+            "otro": 0
+          }
         },
         {
           "id": "auto-electrico",
