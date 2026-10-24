@@ -589,7 +589,7 @@
           "scores": {
             "canela": 0,
             "booleanos": 0,
-            "dinamita": 0,
+            "dinamita": 50,
             "otro": 50
           }
         }
