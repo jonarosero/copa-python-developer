@@ -516,7 +516,12 @@
           "points": 105,
           "bonus": false,
           "icon": "route",
-          "scores": {}
+          "scores": {
+            "canela": 0,
+            "booleanos": 105,
+            "dinamita": 105,
+            "otro": 0
+          }
         },
         {
           "id": "tamagochi-coding",
