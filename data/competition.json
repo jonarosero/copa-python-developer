@@ -548,7 +548,12 @@
           "points": 10,
           "bonus": true,
           "icon": "star",
-          "scores": {}
+          "scores": {
+            "canela": 0,
+            "booleanos": 10,
+            "dinamita": 0,
+            "otro": 0
+          }
         },
         {
           "id": "energia-tamagochi",
