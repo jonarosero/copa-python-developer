@@ -572,7 +572,12 @@
           "points": 15,
           "bonus": true,
           "icon": "star",
-          "scores": {}
+          "scores": {
+            "canela": 0,
+            "booleanos": 0,
+            "dinamita": 15,
+            "otro": 0
+          }
         },
         {
           "id": "ataques-especiales-juegos-hambre",
