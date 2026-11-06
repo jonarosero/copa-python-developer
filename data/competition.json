@@ -507,7 +507,7 @@
       "number": 6,
       "title": "Herencia y polimorfismo",
       "closesAt": "2026-10-24T18:00:00.000Z",
-      "status": "active",
+      "status": "closed",
       "activities": [
         {
           "id": "taller-juan-mecanico",
@@ -598,7 +598,7 @@
     {
       "number": 7,
       "title": "SQL — Arena de combate",
-      "status": "upcoming",
+      "status": "active",
       "activities": [
         {
           "id": "sql-modelar-arena",
