@@ -597,9 +597,91 @@
     },
     {
       "number": 7,
-      "title": "Próximos retos",
+      "title": "SQL — Arena de combate",
       "status": "upcoming",
-      "activities": []
+      "activities": [
+        {
+          "id": "sql-modelar-arena",
+          "title": "Parte 1 — Modelar la arena",
+          "description": "## 20 puntos\nDiseña el diagrama entidad-relación para almacenar el historial de **Los Juegos del Hambre** programados en la semana 6. No escribas SQL todavía.\n\nEl sistema debe guardar jugadores que pueden participar en varias partidas. En cada partida, cada jugador puede escoger un personaje distinto: Guerrero, Mago o Arquero. Por eso la clase no es un dato fijo del jugador; depende de la partida que está jugando.\n\nCada partida enfrenta exactamente a dos personajes y debe registrar fecha, estado, ganador y cantidad de turnos. Cada personaje debe conservar tipo, vida máxima, vida final, daño básico y si usó su habilidad. Una partida tiene muchos turnos y cada turno registra quién actuó, quién recibió la acción y qué ocurrió: ataque básico, protección, curación o doble disparo.\n\nEntrega el diagrama con entidades, datos mínimos, cardinalidades y reglas para evitar que un jugador tenga dos personajes en la misma partida.\n\n> **Mecánica Paso:** si el equipo escribe `PASO`, el docente entrega la solución para continuar; esta parte queda en **0 puntos**.",
+          "points": 20,
+          "bonus": false,
+          "icon": "route",
+          "scores": {}
+        },
+        {
+          "id": "sql-crear-tablas",
+          "title": "Parte 2 — Crear la base y las tablas",
+          "description": "## 35 puntos\nConvierte el diagrama anterior en SQL. Crea la base `juegos_del_hambre` y las tablas necesarias para guardar jugadores, partidas, personajes, turnos y acciones.\n\nCada tabla debe tener una clave primaria, datos obligatorios donde corresponda y las relaciones que descubrieron en el diagrama. Usa nombres en minúsculas y `snake_case`.\n\nValores iniciales de clase:\n\n| Clase | Vida máxima | Daño básico |\n|---|---:|---:|\n| Guerrero | 140 | 15 |\n| Mago | 105 | 20 |\n| Arquero | 90 | 25 |\n\nVerifica el resultado con `SHOW TABLES;` y `DESCRIBE nombre_tabla;`.\n\n> **Mecánica Paso:** al pedir `PASO`, reciben las sentencias necesarias para continuar y obtienen **0 puntos** en esta parte.",
+          "points": 35,
+          "bonus": false,
+          "icon": "blocks",
+          "scores": {}
+        },
+        {
+          "id": "sql-insertar-partidas",
+          "title": "Parte 3 — Poblar la arena",
+          "description": "## 25 puntos\nInserta datos suficientes para probar el sistema: mínimo 4 jugadores, 2 partidas, 2 personajes por partida, 8 turnos y acciones de ataque básico. Registra también al menos una Protección, Curación o Doble disparo.\n\nEjemplo de historia válida:\n\n```text\nAna usa Guerrero contra Luis, Arquero.\nAna activa Protección.\nLuis activa Doble disparo.\nLuis usa ataque básico y causa daño duplicado.\n```\n\nUsa `INSERT INTO` y conserva datos coherentes entre todas las tablas.\n\n> **Mecánica Paso:** el docente entrega los `INSERT` de referencia; el reto queda en **0 puntos**.",
+          "points": 25,
+          "bonus": false,
+          "icon": "code",
+          "scores": {}
+        },
+        {
+          "id": "sql-consultas-basicas",
+          "title": "Parte 4 — Consultas básicas de supervivencia",
+          "description": "## 35 puntos\nEscribe consultas para responder: todos los jugadores, personajes de una partida, solo magos, personajes ordenados por vida final, jugadores cuyo nombre comience con una letra elegida, actualización de vida final y eliminación de una partida de prueba.\n\nDebes usar: `SELECT`, `WHERE`, `ORDER BY`, `LIKE`, `UPDATE` y `DELETE`.\n\nAntes de ejecutar un `UPDATE` o `DELETE`, muestra primero los registros que serán afectados.\n\n> **Mecánica Paso:** el docente entrega las sentencias de consulta y el equipo continúa con la siguiente parte, pero esta queda en **0 puntos**.",
+          "points": 35,
+          "bonus": false,
+          "icon": "search",
+          "scores": {}
+        },
+        {
+          "id": "sql-inner-join-historial",
+          "title": "Parte 5 — Historial de combate con INNER JOIN",
+          "description": "## 45 puntos\nConstruye una consulta que muestre el historial legible de una partida. Debe incluir número de turno, jugador atacante, clase atacante, jugador defensor, clase defensora, acción, daño y curación.\n\n```text\nTurno  Jugador  Clase      Acción          Daño  Curación\n1      Ana      Guerrero   ataque_basico     15      0\n2      Luis     Arquero    doble_disparo      0      0\n3      Luis     Arquero    ataque_basico     50      0\n```\n\nUsa `INNER JOIN` para conectar turnos, acciones, personajes y jugadores. Usa alias para que la sentencia se pueda leer con facilidad.\n\n> **Mecánica Paso:** el docente entrega una consulta de referencia; esta parte queda en **0 puntos**.",
+          "points": 45,
+          "bonus": false,
+          "icon": "calculator",
+          "scores": {}
+        },
+        {
+          "id": "sql-estadisticas-group-by",
+          "title": "Parte 6 — Estadísticas de la arena",
+          "description": "## 55 puntos\nCrea consultas con `COUNT`, `SUM`, `AVG`, `MAX`, `MIN`, `GROUP BY` y `HAVING`.\n\nConsultas obligatorias:\n\n1. Partidas jugadas por jugador.\n2. Victorias por jugador.\n3. Daño promedio, máximo y mínimo por clase.\n4. Total de curación realizada por magos.\n5. Ataques básicos por partida.\n6. Habilidades especiales usadas por clase.\n7. Jugadores con dos o más partidas.\n\n> **Mecánica Paso:** puedes recibir las sentencias para seguir; al usar `PASO`, esta parte vale **0 puntos**.",
+          "points": 55,
+          "bonus": false,
+          "icon": "crown",
+          "scores": {}
+        },
+        {
+          "id": "sql-bonus-objetos-inventario",
+          "title": "Bonus 1 — Objetos e inventario",
+          "description": "## 25 puntos\nAgrega objetos para los personajes: Espada de hierro, Vara arcana, Arco reforzado, Escudo, Poción de vida y Poción de fuerza. Cada objeto debe tener nombre, tipo, descripción, efecto y valor.\n\nRegistra qué objetos posee cada personaje y cuántos tiene. Debe ser posible consultar inventario por personaje, personajes con escudos, cantidad de objetos por personaje y objetos de mayor valor.\n\n> **Mecánica Paso:** si solicitan la solución, reciben las tablas y consultas base, pero este bonus queda en **0 puntos**.",
+          "points": 25,
+          "bonus": true,
+          "icon": "star",
+          "scores": {}
+        },
+        {
+          "id": "sql-bonus-uso-objetos",
+          "title": "Bonus 2 — Uso de objetos en batalla",
+          "description": "## 20 puntos\nRegistra cuándo un personaje usa un objeto durante un turno. La consulta del historial debe incluir jugador, objeto usado, turno, efecto y cantidad usada.\n\n```text\nTurno 4: Ana usa Poción de vida.\nAna recupera 20 puntos de vida.\n```\n\n> **Mecánica Paso:** pueden pedir las sentencias para continuar, pero el bonus queda en **0 puntos**.",
+          "points": 20,
+          "bonus": true,
+          "icon": "star",
+          "scores": {}
+        },
+        {
+          "id": "sql-bonus-subconsultas",
+          "title": "Bonus 3 — Subconsultas de campeones",
+          "description": "## 40 puntos\nResuelve al menos cinco consultas con subconsultas. Opciones: jugador con mayor daño total, personajes con vida final superior al promedio, partida con más turnos que el promedio, jugadores que usaron habilidad y ganaron, personajes que nunca usaron objetos, objetos nunca usados, mago que más curó o jugadores con más victorias que el promedio.\n\n> **Mecánica Paso:** el docente comparte las soluciones SQL necesarias para avanzar, pero este bonus recibe **0 puntos**.",
+          "points": 40,
+          "bonus": true,
+          "icon": "star",
+          "scores": {}
+        }
+      ]
     },
     {
       "number": 8,
