@@ -685,9 +685,64 @@
     },
     {
       "number": 8,
-      "title": "Próximos retos",
+      "title": "Python + MySQL — La arena conectada",
       "status": "upcoming",
-      "activities": []
+      "activities": [
+        {
+          "id": "semana8-conexion-mysql",
+          "title": "Reto 1 — Conectar Python con la arena",
+          "description": "## 30 puntos · 20 minutos\n\nPartimos del juego de Semana 6 y de la base `juegos_del_hambre` preparada con el archivo SQL de Semana 7. Instala `mysql-connector-python`, crea `conexion.py` y conecta Python con MySQL.\n\nEl programa debe comprobar la conexión, mostrar un mensaje cuando conecte y cerrar la conexión al terminar. No publiques ni compartas tu contraseña.\n\n```python\nimport mysql.connector\n\nconexion = mysql.connector.connect(\n    host=\"127.0.0.1\",\n    user=\"root\",\n    password=\"TU_CLAVE_LOCAL\",\n    database=\"juegos_del_hambre\"\n)\nprint(\"Conectado:\", conexion.is_connected())\nconexion.close()\n```\n\n### Entrega\n- `python -m pip install mysql-connector-python` instalado correctamente.\n- `conexion.py` conecta con la base y cierra la conexión.\n- El juego todavía debe poder ejecutarse sin borrar sus funciones actuales.\n\n### Pista\nPrimero prueba la conexión en un archivo pequeño. Confirma que MySQL está iniciado y que ejecutaste el archivo SQL de Semana 7.",
+          "points": 30,
+          "bonus": false,
+          "icon": "route",
+          "scores": {}
+        },
+        {
+          "id": "semana8-consultar-personajes",
+          "title": "Reto 2 — Leer el catálogo de personajes",
+          "description": "## 40 puntos · 25 minutos\n\nUsa la conexión del Reto 1 para consultar la tabla `personajes`. Trae `id`, `clase`, `vida_maxima` y `dano_basico`, y muestra cada resultado en consola.\n\n```sql\nSELECT id, clase, vida_maxima, dano_basico\nFROM personajes\nORDER BY id;\n```\n\nUsa un cursor, `execute()`, `fetchall()` y recorre las filas con `for`. Cierra el cursor cuando termines.\n\n```text\nPersonajes disponibles\n1. Guerrero — Vida: 140 — Daño: 15\n2. Mago — Vida: 105 — Daño: 20\n3. Arquero — Vida: 90 — Daño: 25\n```\n\n### Entrega\nAl iniciar el programa, la lista de personajes debe venir de MySQL y no de valores escritos directamente en el menú.\n\n### Pista\nLa consulta devuelve los valores que ya estaban en `CLASES` del juego. En este reto solo muéstralos; en el siguiente los usaremos para crear los objetos Python.",
+          "points": 40,
+          "bonus": false,
+          "icon": "search",
+          "scores": {}
+        },
+        {
+          "id": "semana8-seleccionar-personaje-db",
+          "title": "Reto 3 — Elegir personaje desde MySQL",
+          "description": "## 50 puntos · 30 minutos\n\nCambia `seleccionar_personaje()` para que las opciones se construyan con las filas consultadas desde `personajes`. Al elegir una opción, crea la clase Python correcta (`Guerrero`, `Mago` o `Arquero`) y pasa su nombre, vida máxima y daño básico al constructor.\n\nMantén el comportamiento y las habilidades del juego base. Si el jugador elige una opción incorrecta, vuelve a preguntar.\n\n### Resultado esperado\n- Si MySQL cambia la vida o el daño de una clase, el juego utiliza los nuevos valores sin editar el diccionario `CLASES` a mano.\n- Las consultas y los cursores se cierran al finalizar la lectura.\n\n### Pista\nPuedes conservar un diccionario que relacione el nombre de cada clase con su clase Python. Usa la fila de MySQL para obtener las estadísticas y ese diccionario para seleccionar qué clase instanciar.",
+          "points": 50,
+          "bonus": false,
+          "icon": "blocks",
+          "scores": {}
+        },
+        {
+          "id": "semana8-registrar-partida",
+          "title": "Reto 4 — Registrar jugadores y partida",
+          "description": "## 60 puntos · 35 minutos\n\nCuando los dos jugadores hayan elegido su personaje, registra el inicio en MySQL usando las tablas `jugadores`, `partidas` y `participaciones`.\n\n1. Busca cada jugador por nombre; si no existe, insértalo.\n2. Inserta una fila en `partidas` con estado `en_curso`.\n3. Inserta una participación por jugador con el personaje elegido y su vida inicial.\n4. Guarda los cambios con `conexion.commit()`.\n\nUsa parámetros `%s` para todos los valores. No construyas SQL concatenando los nombres que escribieron los jugadores.\n\n### Entrega\nCada nueva partida queda relacionada con dos jugadores y dos participaciones. Si un jugador regresa, se reutiliza su registro de `jugadores` en lugar de duplicarlo.\n\n### Pista\nConsulta `jugadores` con `WHERE nombre = %s`. Después de un `INSERT`, `cursor.lastrowid` permite obtener el ID recién creado. `participaciones` relaciona el ID de la partida, el jugador y el personaje seleccionado.",
+          "points": 60,
+          "bonus": false,
+          "icon": "code",
+          "scores": {}
+        },
+        {
+          "id": "semana8-juego-persistente",
+          "title": "Reto 5 — Reto final: jugar y guardar la partida",
+          "description": "## 100 puntos · 50 minutos\n\nCompleta la integración para que una partida jugada en el programa también quede guardada en MySQL. Conserva el juego de Semana 6: ataques, habilidades, inventario y opción de volver a jugar.\n\n### Requisitos\n- Por cada acción que consume un turno, inserta una fila en `turnos` y su acción en `acciones`.\n- Guarda el tipo de acción, el daño o la curación y una descripción legible.\n- Después de cada acción, actualiza `vida_final` de las participaciones correspondientes.\n- Cuando termine el combate, actualiza la partida a `finalizada` e indica el `ganador_participacion_id`.\n- Si se usa un objeto, actualiza su cantidad en `inventarios` y registra el consumo en `uso_objetos`.\n- Usa consultas con parámetros; confirma los cambios con `commit()` y cierra cursores y conexión al salir.\n\n### Prueba final\nJueguen una partida, cierren el programa y consulten en MySQL que existen la partida, las dos participaciones, los turnos, las acciones y el ganador. Luego vuelvan a jugar y comprueben que se creó otra partida.\n\n### Pista\n`turnos` guarda quién ataca y quién defiende; `acciones` guarda qué hizo quien tomó el turno. La tabla `participaciones` representa a cada jugador dentro de esa partida. Revisen las claves foráneas del SQL de Semana 7 y registren las filas en un orden compatible con ellas.",
+          "points": 100,
+          "bonus": false,
+          "icon": "crown",
+          "scores": {}
+        },
+        {
+          "id": "semana8-bonus-historial-python",
+          "title": "Bonus — Consultar historial desde Python",
+          "description": "## 30 puntos · Extensión\n\nAgrega al menú una opción para consultar el historial de una partida. Ejecuta desde Python un `SELECT` con `JOIN` entre `turnos`, `acciones`, `participaciones`, `jugadores` y `personajes`.\n\nMuestra número de turno, jugador atacante, clase atacante, jugador defensor, acción, daño y curación, ordenados por número de turno. Pide el ID de partida usando una consulta parametrizada.\n\n### Pista\nEn el historial, atacante y defensor son dos participaciones distintas. Usa alias para unir dos veces `participaciones`, `jugadores` y `personajes` sin confundir los datos.",
+          "points": 30,
+          "bonus": true,
+          "icon": "star",
+          "scores": {}
+        }
+      ]
     }
   ]
 }
