@@ -598,7 +598,7 @@
     {
       "number": 7,
       "title": "SQL — Arena de combate",
-      "status": "active",
+      "status": "upcoming",
       "activities": [
         {
           "id": "sql-modelar-arena",
@@ -686,7 +686,7 @@
     {
       "number": 8,
       "title": "Python + MySQL — La arena conectada",
-      "status": "upcoming",
+      "status": "active",
       "activities": [
         {
           "id": "semana8-conexion-mysql",
