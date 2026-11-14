@@ -700,7 +700,12 @@
           "points": 30,
           "bonus": false,
           "icon": "route",
-          "scores": {}
+          "scores": {
+            "canela": 0,
+            "booleanos": 30,
+            "dinamita": 30,
+            "otro": 0
+          }
         },
         {
           "id": "semana8-consultar-personajes",
