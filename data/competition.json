@@ -714,7 +714,12 @@
           "points": 40,
           "bonus": false,
           "icon": "search",
-          "scores": {}
+          "scores": {
+            "canela": 0,
+            "booleanos": 0,
+            "dinamita": 40,
+            "otro": 0
+          }
         },
         {
           "id": "semana8-seleccionar-personaje-db",
